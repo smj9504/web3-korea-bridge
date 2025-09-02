@@ -1,0 +1,224 @@
+{
+  "navigation": {
+    "home": "홈",
+    "about": "소개",
+    "services": "서비스",
+    "blog": "블로그",
+    "news": "뉴스",
+    "events": "이벤트",
+    "resources": "자료",
+    "contact": "연락처",
+    "language": "언어"
+  },
+  "hero": {
+    "title": "한국과 세계를 연결하는 Web3 혁신의 다리",
+    "subtitle": "전략적 파트너십, 전문 가이던스, 그리고 종합적인 지원 서비스를 통해 한국 블록체인 프로젝트와 글로벌 기회를 연결합니다.",
+    "cta": "시작하기",
+    "learnMore": "자세히 보기",
+    "watchVideo": "동영상 보기"
+  },
+  "about": {
+    "title": "Web3 코리아 브릿지 소개",
+    "subtitle": "한국과 그 너머의 Web3 성공을 위한 관문",
+    "mission": {
+      "title": "우리의 미션",
+      "description": "한국 혁신가들과 글로벌 블록체인 생태계 간의 원활한 연결을 제공하여 Web3 기술의 채택과 성공을 가속화합니다."
+    },
+    "vision": {
+      "title": "우리의 비전",
+      "description": "지리적 경계가 혁신을 제한하지 않는 세상, 한국의 Web3 프로젝트가 글로벌 시장에 쉽게 접근하고 국제 프로젝트가 한국의 역동적인 블록체인 환경을 활용할 수 있는 세상을 꿈꿉니다."
+    },
+    "values": {
+      "title": "우리의 가치",
+      "innovation": "혁신",
+      "transparency": "투명성",
+      "collaboration": "협력",
+      "excellence": "우수성"
+    }
+  },
+  "services": {
+    "title": "서비스",
+    "subtitle": "한국 및 국제 프로젝트를 위한 종합적인 Web3 솔루션",
+    "consulting": {
+      "title": "전략 컨설팅",
+      "description": "블록체인 전략, 토크노믹스 및 시장 진입에 대한 전문가 가이던스"
+    },
+    "localization": {
+      "title": "시장 현지화",
+      "description": "한국 시장 진입을 위한 문화적 적응 및 규제 준수"
+    },
+    "partnerships": {
+      "title": "파트너십 개발",
+      "description": "전략적 파트너, 투자자 및 커뮤니티와 프로젝트 연결"
+    },
+    "technical": {
+      "title": "기술 지원",
+      "description": "블록체인 개발, 스마트 컨트랙트 감사 및 기술 구현"
+    },
+    "marketing": {
+      "title": "마케팅 & PR",
+      "description": "한국 및 글로벌 시장에서의 종합적인 마케팅 캠페인 및 홍보"
+    },
+    "events": {
+      "title": "이벤트 & 네트워킹",
+      "description": "Web3 분야의 독점 이벤트, 밋업 및 네트워킹 기회"
+    }
+  },
+  "blog": {
+    "title": "블로그",
+    "subtitle": "Web3 및 블록체인의 최신 인사이트와 트렌드",
+    "readMore": "더 읽기",
+    "shareArticle": "기사 공유",
+    "relatedPosts": "관련 글",
+    "categories": "카테고리",
+    "tags": "태그",
+    "author": "작성자",
+    "publishedOn": "발행일",
+    "readingTime": "{minutes}분 읽기",
+    "noResults": "블로그 글을 찾을 수 없습니다",
+    "searchPlaceholder": "블로그 글 검색..."
+  },
+  "news": {
+    "title": "뉴스",
+    "subtitle": "최신 Web3 개발 동향을 확인하세요",
+    "readMore": "더 읽기",
+    "shareNews": "뉴스 공유",
+    "relatedNews": "관련 뉴스",
+    "categories": "카테고리",
+    "publishedOn": "발행일",
+    "urgent": "긴급",
+    "featured": "주요",
+    "noResults": "뉴스를 찾을 수 없습니다",
+    "searchPlaceholder": "뉴스 검색..."
+  },
+  "contact": {
+    "title": "문의하기",
+    "subtitle": "Web3 전문가들과 연결하세요",
+    "form": {
+      "name": "성명",
+      "namePlaceholder": "성명을 입력해주세요",
+      "email": "이메일 주소",
+      "emailPlaceholder": "이메일 주소를 입력해주세요",
+      "phone": "전화번호",
+      "phonePlaceholder": "전화번호를 입력해주세요 (선택사항)",
+      "company": "회사명",
+      "companyPlaceholder": "회사명을 입력해주세요 (선택사항)",
+      "subject": "제목",
+      "subjectPlaceholder": "문의 제목을 입력해주세요",
+      "message": "메시지",
+      "messagePlaceholder": "프로젝트나 문의사항에 대해 알려주세요...",
+      "submit": "메시지 보내기",
+      "sending": "전송 중...",
+      "success": "감사합니다! 메시지가 성공적으로 전송되었습니다. 곧 연락드리겠습니다.",
+      "error": "죄송합니다. 메시지 전송 중 오류가 발생했습니다. 다시 시도하거나 직접 연락해주세요."
+    },
+    "info": {
+      "address": "주소",
+      "email": "이메일",
+      "phone": "전화",
+      "hours": "운영시간",
+      "hoursValue": "월요일 - 금요일: 오전 9시 - 오후 6시 (한국시간)"
+    }
+  },
+  "footer": {
+    "description": "전략적 파트너십과 전문가 가이던스를 통해 한국과 세계 간의 Web3 혁신을 연결합니다.",
+    "quickLinks": "바로가기",
+    "services": "서비스",
+    "company": "회사",
+    "legal": "법적 고지",
+    "privacyPolicy": "개인정보 처리방침",
+    "termsOfService": "서비스 이용약관",
+    "cookiePolicy": "쿠키 정책",
+    "newsletter": {
+      "title": "최신 소식 받기",
+      "description": "최신 Web3 인사이트와 업데이트를 받아보세요.",
+      "placeholder": "이메일을 입력하세요",
+      "subscribe": "구독하기",
+      "success": "구독해주셔서 감사합니다!",
+      "error": "구독에 실패했습니다. 다시 시도해주세요."
+    },
+    "social": "팔로우하기",
+    "copyright": "© 2024 Web3 Korea Bridge. All rights reserved.",
+    "builtWith": "한국에서 ❤️로 제작"
+  },
+  "common": {
+    "loading": "로딩 중...",
+    "error": "오류가 발생했습니다",
+    "retry": "다시 시도",
+    "cancel": "취소",
+    "save": "저장",
+    "edit": "수정",
+    "delete": "삭제",
+    "confirm": "확인",
+    "search": "검색",
+    "filter": "필터",
+    "sort": "정렬",
+    "clear": "지우기",
+    "showMore": "더 보기",
+    "showLess": "접기",
+    "previous": "이전",
+    "next": "다음",
+    "page": "페이지",
+    "of": "의",
+    "results": "결과",
+    "noResults": "결과를 찾을 수 없습니다",
+    "required": "필수",
+    "optional": "선택사항",
+    "backToTop": "맨 위로"
+  },
+  "admin": {
+    "dashboard": {
+      "title": "관리자 대시보드",
+      "welcome": "다시 오신 것을 환영합니다",
+      "stats": {
+        "totalPosts": "전체 글",
+        "totalNews": "전체 뉴스",
+        "totalContacts": "전체 문의",
+        "totalViews": "전체 조회수"
+      }
+    },
+    "login": {
+      "title": "관리자 로그인",
+      "email": "이메일",
+      "password": "비밀번호",
+      "signIn": "로그인",
+      "signingIn": "로그인 중...",
+      "error": "이메일 또는 비밀번호가 올바르지 않습니다",
+      "required": "이 필드는 필수입니다"
+    },
+    "posts": {
+      "title": "블로그 글",
+      "create": "글 작성",
+      "edit": "글 수정",
+      "delete": "글 삭제",
+      "confirmDelete": "정말로 이 글을 삭제하시겠습니까?",
+      "published": "발행됨",
+      "draft": "초안",
+      "featured": "주요"
+    },
+    "news": {
+      "title": "뉴스",
+      "create": "뉴스 작성",
+      "edit": "뉴스 수정",
+      "delete": "뉴스 삭제",
+      "confirmDelete": "정말로 이 뉴스를 삭제하시겠습니까?",
+      "urgent": "긴급",
+      "featured": "주요"
+    },
+    "contacts": {
+      "title": "문의",
+      "view": "문의 보기",
+      "markResolved": "해결됨으로 표시",
+      "markSpam": "스팸으로 표시",
+      "new": "새로운",
+      "inProgress": "진행중",
+      "resolved": "해결됨",
+      "spam": "스팸"
+    }
+  },
+  "seo": {
+    "defaultTitle": "Web3 코리아 브릿지 - 한국 블록체인 혁신과 글로벌 기회 연결",
+    "defaultDescription": "한국 블록체인 프로젝트와 글로벌 시장을 연결하는 선도적인 Web3 컨설팅 회사. 전략 컨설팅, 시장 현지화 및 파트너십 개발 서비스 제공.",
+    "keywords": "Web3, 블록체인, 한국, 컨설팅, 암호화폐, DeFi, NFT, 메타버스, 블록체인 개발"
+  }
+}

@@ -1,0 +1,202 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  USER
+  EDITOR
+  ADMIN
+}
+
+enum PostStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String?
+  password  String
+  role      Role     @default(USER)
+  avatar    String?
+  bio       String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  // Relations
+  posts     Post[]
+  news      News[]
+  
+  @@map("users")
+}
+
+model Category {
+  id          String @id @default(cuid())
+  name        Json   // Multi-language support: {"en": "Technology", "ko": "기술"}
+  slug        String @unique
+  description Json?  // Multi-language support
+  color       String @default("#3b82f6")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  // Relations
+  posts       Post[]
+  
+  @@map("categories")
+}
+
+model Tag {
+  id        String @id @default(cuid())
+  name      Json   // Multi-language support
+  slug      String @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  // Relations
+  posts     Post[]
+  
+  @@map("tags")
+}
+
+model Post {
+  id          String     @id @default(cuid())
+  title       Json       // Multi-language support
+  content     Json       // Multi-language support
+  excerpt     Json?      // Multi-language support
+  slug        String     @unique
+  coverImage  String?
+  status      PostStatus @default(DRAFT)
+  publishedAt DateTime?
+  views       Int        @default(0)
+  featured    Boolean    @default(false)
+  seoTitle    Json?      // Multi-language SEO
+  seoDescription Json?   // Multi-language SEO
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+  
+  // Relations
+  authorId    String
+  author      User       @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  
+  categories  Category[]
+  tags        Tag[]
+  
+  @@index([status])
+  @@index([publishedAt])
+  @@index([featured])
+  @@index([authorId])
+  @@map("posts")
+}
+
+model NewsCategory {
+  id          String @id @default(cuid())
+  name        Json   // Multi-language support
+  slug        String @unique
+  description Json?  // Multi-language support
+  color       String @default("#10b981")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  // Relations
+  news        News[]
+  
+  @@map("news_categories")
+}
+
+model News {
+  id          String     @id @default(cuid())
+  title       Json       // Multi-language support
+  content     Json       // Multi-language support
+  excerpt     Json?      // Multi-language support
+  slug        String     @unique
+  coverImage  String?
+  status      PostStatus @default(DRAFT)
+  publishedAt DateTime?
+  views       Int        @default(0)
+  featured    Boolean    @default(false)
+  urgent      Boolean    @default(false)
+  seoTitle    Json?      // Multi-language SEO
+  seoDescription Json?   // Multi-language SEO
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+  
+  // Relations
+  authorId    String
+  author      User         @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  
+  categoryId  String
+  category    NewsCategory @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  
+  @@index([status])
+  @@index([publishedAt])
+  @@index([featured])
+  @@index([urgent])
+  @@index([authorId])
+  @@index([categoryId])
+  @@map("news")
+}
+
+model Contact {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  subject   String
+  message   String
+  phone     String?
+  company   String?
+  status    ContactStatus @default(NEW)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  @@index([status])
+  @@index([createdAt])
+  @@map("contacts")
+}
+
+enum ContactStatus {
+  NEW
+  IN_PROGRESS
+  RESOLVED
+  SPAM
+}
+
+model Settings {
+  id    String @id @default(cuid())
+  key   String @unique
+  value Json
+  
+  @@map("settings")
+}
+
+model Newsletter {
+  id          String   @id @default(cuid())
+  email       String   @unique
+  subscribed  Boolean  @default(true)
+  locale      String   @default("en")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  @@index([subscribed])
+  @@map("newsletter_subscribers")
+}
+
+// Analytics and tracking
+model PageView {
+  id        String   @id @default(cuid())
+  path      String
+  userAgent String?
+  ip        String?
+  country   String?
+  createdAt DateTime @default(now())
+  
+  @@index([path])
+  @@index([createdAt])
+  @@map("page_views")
+}

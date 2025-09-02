@@ -1,0 +1,63 @@
+name: Database Backup
+
+on:
+  schedule:
+    - cron: '0 2 * * *' # Daily at 2 AM UTC (11 AM KST)
+  workflow_dispatch:
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Generate Prisma Client
+        run: npx prisma generate
+        
+      - name: Create Database Backup
+        run: |
+          # Create backup timestamp
+          BACKUP_DATE=$(date +%Y%m%d_%H%M%S)
+          
+          # Export database schema and data
+          npx prisma db execute --file=./prisma/backup_script.sql --url=${{ secrets.PRODUCTION_DATABASE_URL }} > backup_${BACKUP_DATE}.sql
+          
+          echo "Backup created: backup_${BACKUP_DATE}.sql"
+          
+      - name: Configure AWS credentials
+        if: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ap-northeast-2
+          
+      - name: Upload to S3
+        if: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        run: |
+          BACKUP_DATE=$(date +%Y%m%d_%H%M%S)
+          aws s3 cp backup_${BACKUP_DATE}.sql s3://web3korea-backups/database/
+          
+      - name: Cleanup old backups
+        if: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        run: |
+          # Keep only last 30 days of backups
+          CUTOFF_DATE=$(date -d '30 days ago' +%Y-%m-%d)
+          aws s3api list-objects-v2 --bucket web3korea-backups --prefix database/ --query "Contents[?LastModified<='${CUTOFF_DATE}'].Key" --output text | xargs -r -I {} aws s3 rm s3://web3korea-backups/{}
+          
+      - name: Notification
+        if: failure()
+        run: |
+          echo "Backup failed - notification would be sent here"
+          # curl -X POST ${{ secrets.SLACK_WEBHOOK_URL }} -H 'Content-type: application/json' --data '{"text":"Database backup failed"}'
