@@ -1,0 +1,158 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Connect the World of Web3 to Korea",
+    "subtitle": "The fastest path to success for overseas Web3 companies entering Korea",
+    "description": "15 years of Samsung Electronics finance/strategy, PEF M&A expert",
+    "cta": {
+      "primary": "Contact Us",
+      "secondary": "Explore Services"
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Pioneer the Korean market with Web3 Korea Bridge",
+    "partnership": {
+      "title": "Partnership Coordinating",
+      "description": "Strategic partnership building with major corporations (IT/Gaming/Entertainment)",
+      "features": [
+        "Customized proposal creation",
+        "Negotiation representation",
+        "Contract execution support",
+        "Partnership management"
+      ]
+    },
+    "consulting": {
+      "title": "Operations Consulting",
+      "description": "Complete operational support for Korean market entry",
+      "features": [
+        "Corporate establishment",
+        "Finance/Tax/Accounting advisory",
+        "Recruitment support",
+        "License acquisition support"
+      ]
+    },
+    "event": {
+      "title": "Events & Marketing",
+      "description": "Effective Korean market marketing strategy and execution",
+      "features": [
+        "Blockchain event participation",
+        "Exclusive event planning",
+        "PR/Marketing strategy",
+        "Media connections"
+      ]
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "Your trusted Web3 business partner",
+    "founder": {
+      "title": "Founder Introduction",
+      "name": "Founder",
+      "role": "CEO & Founder",
+      "description": "15 years Samsung Electronics finance/strategy expert",
+      "experience": [
+        "15 years Samsung Electronics global finance/strategy",
+        "PEF M&A specialist",
+        "Corporate decision-making structure expert",
+        "Complex financial flow analysis specialist"
+      ]
+    },
+    "vision": {
+      "title": "Vision & Mission",
+      "vision": "The premier bridge connecting global Web3 companies with the Korean market",
+      "mission": "We help Web3 companies successfully enter Korea with our expertise and network"
+    },
+    "values": {
+      "title": "Core Values",
+      "trust": {
+        "title": "Trust",
+        "description": "Deep trust based on corporate experience"
+      },
+      "network": {
+        "title": "Network",
+        "description": "Strong network with Korean corporations and institutions"
+      },
+      "solution": {
+        "title": "One-Stop Solution",
+        "description": "Support from entry to growth at every stage"
+      }
+    }
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "subtitle": "Successful project cases",
+    "viewDetails": "View Details",
+    "category": {
+      "all": "All",
+      "partnership": "Partnership",
+      "consulting": "Consulting",
+      "event": "Event"
+    }
+  },
+  "blog": {
+    "title": "Blog & News",
+    "subtitle": "Latest news and insights from Web3 Korea Bridge",
+    "readMore": "Read More",
+    "viewAll": "View All"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Grow with Web3 Korea Bridge",
+    "form": {
+      "company": "Company Name",
+      "name": "Contact Person",
+      "email": "Email",
+      "phone": "Phone Number",
+      "message": "Message",
+      "submit": "Send Inquiry",
+      "sending": "Sending...",
+      "success": "Your inquiry has been sent successfully.",
+      "error": "An error occurred. Please try again."
+    },
+    "info": {
+      "title": "Contact Information",
+      "email": "Email",
+      "phone": "Phone",
+      "address": "Address"
+    }
+  },
+  "footer": {
+    "company": "Web3-Korea Bridge",
+    "tagline": "Partner for overseas Web3 companies entering Korea",
+    "links": {
+      "title": "Quick Links",
+      "about": "About",
+      "services": "Services",
+      "portfolio": "Portfolio",
+      "blog": "Blog",
+      "contact": "Contact"
+    },
+    "services": {
+      "title": "Services",
+      "partnership": "Partnership Coordinating",
+      "consulting": "Operations Consulting",
+      "event": "Events & Marketing"
+    },
+    "copyright": "© 2024 Web3-Korea Bridge. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "common": {
+    "learnMore": "Learn More",
+    "getStarted": "Get Started",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Success",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous"
+  }
+}

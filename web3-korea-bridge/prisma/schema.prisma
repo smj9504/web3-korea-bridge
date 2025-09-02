@@ -1,0 +1,148 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// Admin User Model
+model Admin {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
+  name      String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  posts      BlogPost[]
+  portfolios Portfolio[]
+  inquiries  ContactInquiry[]
+}
+
+// Blog Post Model
+model BlogPost {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  titleKo     String
+  titleEn     String
+  excerptKo   String
+  excerptEn   String
+  contentKo   String   @db.Text
+  contentEn   String   @db.Text
+  category    String
+  coverImage  String?
+  published   Boolean  @default(false)
+  publishedAt DateTime?
+  viewCount   Int      @default(0)
+  
+  authorId    String
+  author      Admin    @relation(fields: [authorId], references: [id])
+  
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  @@index([slug])
+  @@index([published, publishedAt])
+}
+
+// Portfolio Model
+model Portfolio {
+  id           String   @id @default(cuid())
+  titleKo      String
+  titleEn      String
+  descriptionKo String   @db.Text
+  descriptionEn String   @db.Text
+  category     PortfolioCategory
+  clientName   String?
+  projectDate  DateTime
+  coverImage   String?
+  images       String[]
+  featured     Boolean  @default(false)
+  published    Boolean  @default(false)
+  
+  authorId     String
+  author       Admin    @relation(fields: [authorId], references: [id])
+  
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  
+  @@index([category])
+  @@index([published, featured])
+}
+
+enum PortfolioCategory {
+  PARTNERSHIP
+  CONSULTING
+  EVENT
+}
+
+// Contact Inquiry Model
+model ContactInquiry {
+  id         String   @id @default(cuid())
+  company    String
+  name       String
+  email      String
+  phone      String?
+  message    String   @db.Text
+  status     InquiryStatus @default(NEW)
+  notes      String?  @db.Text
+  
+  assignedId String?
+  assigned   Admin?   @relation(fields: [assignedId], references: [id])
+  
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+  
+  @@index([status])
+  @@index([createdAt])
+}
+
+enum InquiryStatus {
+  NEW
+  IN_PROGRESS
+  RESPONDED
+  CLOSED
+}
+
+// Service Content Model (for dynamic content management)
+model ServiceContent {
+  id          String   @id @default(cuid())
+  key         String   @unique
+  titleKo     String
+  titleEn     String
+  descriptionKo String @db.Text
+  descriptionEn String @db.Text
+  features    Json     // Store features as JSON array
+  icon        String?
+  order       Int      @default(0)
+  active      Boolean  @default(true)
+  
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  @@index([key])
+  @@index([active, order])
+}
+
+// Page Content Model (for static pages)
+model PageContent {
+  id         String   @id @default(cuid())
+  page       String   // e.g., "about", "privacy", "terms"
+  section    String   // e.g., "hero", "values", "mission"
+  contentKo  Json     // Store structured content as JSON
+  contentEn  Json
+  
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+  
+  @@unique([page, section])
+  @@index([page])
+}
