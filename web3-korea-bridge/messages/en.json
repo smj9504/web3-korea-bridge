@@ -5,6 +5,7 @@
     "services": "Services",
     "portfolio": "Portfolio",
     "blog": "Blog",
+    "news": "News",
     "contact": "Contact"
   },
   "hero": {
@@ -129,6 +130,7 @@
     "tagline": "Partner for overseas Web3 companies entering Korea",
     "links": {
       "title": "Quick Links",
+      "home": "Home",
       "about": "About",
       "services": "Services",
       "portfolio": "Portfolio",
@@ -140,6 +142,9 @@
       "partnership": "Partnership Coordinating",
       "consulting": "Operations Consulting",
       "event": "Events & Marketing"
+    },
+    "contact": {
+      "title": "Contact"
     },
     "copyright": "© 2024 Web3-Korea Bridge. All rights reserved.",
     "privacy": "Privacy Policy",

@@ -13,11 +13,13 @@ export default getRequestConfig(async ({ locale }) => {
   if (!locales.includes(currentLocale as any)) {
     // Fallback to default locale instead of throwing error
     return {
+      locale: defaultLocale,
       messages: (await import(`./messages/${defaultLocale}.json`)).default
     }
   }
 
   return {
+    locale: currentLocale,
     messages: (await import(`./messages/${currentLocale}.json`)).default
   }
 })

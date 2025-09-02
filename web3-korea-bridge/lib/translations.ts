@@ -16,24 +16,24 @@ export function getLocale() {
 
 export function useTranslations(namespace: keyof Messages) {
   const messages = currentLocale === 'ko' ? koMessages : enMessages
-  const namespaceMessages = messages[namespace] as any
+  const namespaceMessages = messages[namespace] as Record<string, unknown>
   
-  return (key: string) => {
+  return (key: string): string => {
     if (!namespaceMessages) return key
     
     // Handle nested keys like 'cta.primary'
     const keys = key.split('.')
-    let value = namespaceMessages
+    let value: unknown = namespaceMessages
     
     for (const k of keys) {
       if (value && typeof value === 'object' && k in value) {
-        value = value[k]
+        value = (value as Record<string, unknown>)[k]
       } else {
         return key
       }
     }
     
-    return value || key
+    return typeof value === 'string' ? value : key
   }
 }
 

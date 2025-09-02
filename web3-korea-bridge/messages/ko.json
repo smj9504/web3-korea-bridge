@@ -5,6 +5,7 @@
     "services": "서비스",
     "portfolio": "포트폴리오",
     "blog": "블로그",
+    "news": "뉴스",
     "contact": "문의하기"
   },
   "hero": {
@@ -128,7 +129,8 @@
     "company": "Web3-Korea Bridge",
     "tagline": "해외 Web3 기업의 한국 진출 파트너",
     "links": {
-      "title": "Quick Links",
+      "title": "빠른 링크",
+      "home": "홈",
       "about": "회사소개",
       "services": "서비스",
       "portfolio": "포트폴리오",
@@ -136,10 +138,13 @@
       "contact": "문의하기"
     },
     "services": {
-      "title": "Services",
+      "title": "서비스",
       "partnership": "파트너십 코디네이팅",
       "consulting": "운영 컨설팅",
       "event": "이벤트 & 마케팅"
+    },
+    "contact": {
+      "title": "연락처"
     },
     "copyright": "© 2024 Web3-Korea Bridge. All rights reserved.",
     "privacy": "개인정보처리방침",
