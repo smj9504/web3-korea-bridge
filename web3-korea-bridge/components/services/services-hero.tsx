@@ -84,18 +84,15 @@ export function ServicesHero() {
             {t('description')}
           </motion.p>
 
-          {/* CTA Buttons */}
+          {/* CTA Button */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
+            className="flex justify-center mb-16"
           >
             <Button size="lg" className="group">
               {t('cta.primary')}
-            </Button>
-            <Button size="lg" variant="outline">
-              {common.learnMore}
             </Button>
           </motion.div>
 

@@ -41,8 +41,10 @@ export default function NewsPageClient({ locale }: NewsPageClientProps) {
   return (
     <MainLayout>
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+        <div className="absolute inset-0 bg-black/10" />
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
             <Newspaper className="w-12 h-12 mx-auto mb-4" />
             <h1 className="text-4xl font-bold mb-4">{t('news.title')}</h1>

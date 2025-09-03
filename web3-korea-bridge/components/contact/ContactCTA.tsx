@@ -111,7 +111,7 @@ export default function ContactCTA({ locale }: ContactCTAProps) {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-white text-white hover:bg-white/10"
+                className="border-white text-white hover:bg-white hover:text-blue-600 bg-white/10"
               >
                 {t('secondaryButton')}
               </Button>

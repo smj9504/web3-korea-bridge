@@ -91,7 +91,6 @@ export function BlogPageClient({ locale, initialData }: BlogPageClientProps) {
   return (
     <>
       <PageHeader
-        badge={t('badge')}
         title={t('title')}
         subtitle={t('subtitle')}
       />

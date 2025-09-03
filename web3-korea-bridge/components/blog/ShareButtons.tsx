@@ -43,10 +43,10 @@ export function ShareButtons({ url, title }: ShareButtonsProps) {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline" size="sm">
-          <Link2 className="h-4 w-4 mr-2" />
-          {t('share')}
-        </Button>
+        <button className="inline-flex flex-row items-center justify-center gap-2 px-4 py-2 text-sm font-medium border border-gray-300 rounded-md hover:bg-gray-50 transition-colors">
+          <Link2 className="h-4 w-4" />
+          <span>{t('share')}</span>
+        </button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-48">
         <DropdownMenuItem asChild>

@@ -229,21 +229,12 @@ export default function ContactForm({ locale }: ContactFormProps) {
         {/* Submit Button */}
         <Button
           type="submit"
-          className="w-full flex items-center justify-center gap-2"
+          className="w-full"
           disabled={isSubmitting}
           size="lg"
+          leftIcon={isSubmitting ? <Loader2 className="h-4 w-4 animate-spin" /> : <Send className="h-4 w-4" />}
         >
-          {isSubmitting ? (
-            <>
-              <Loader2 className="h-4 w-4 animate-spin" />
-              <span>{t('sending')}</span>
-            </>
-          ) : (
-            <>
-              <Send className="h-4 w-4" />
-              <span>{t('submit')}</span>
-            </>
-          )}
+          {isSubmitting ? t('sending') : t('submit')}
         </Button>
 
         {/* Status Messages */}

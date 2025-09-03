@@ -13,7 +13,7 @@ import { TableOfContents } from '@/components/blog/TableOfContents';
 import { ShareButtons } from '@/components/blog/ShareButtons';
 import { BlogCard } from '@/components/blog/BlogCard';
 import { BlogNewsletter } from '@/components/blog/BlogNewsletter';
-import { Calendar, Clock, User, Tag } from 'lucide-react';
+import { Calendar, Clock, User, Tag, ArrowLeft } from 'lucide-react';
 
 interface BlogDetailClientProps {
   post: BlogPost;
@@ -41,9 +41,9 @@ export function BlogDetailClient({ post, relatedPosts, locale }: BlogDetailClien
     <>
       {/* Header */}
       <div className="bg-gradient-to-b from-primary/5 to-transparent">
-        <Container className="pt-16 pb-8">
+        <Container className="pt-24 lg:pt-28 pb-8">
           <Link href={`/${currentLocale}/blog`}>
-            <Button variant="ghost" size="sm" className="mb-6">
+            <Button variant="outline" size="sm" className="mb-6 border-gray-300 text-gray-700 hover:bg-gray-100" leftIcon={<ArrowLeft className="h-4 w-4" />}>
               {t('post.backToBlog')}
             </Button>
           </Link>

@@ -182,10 +182,6 @@ export function ContactSection() {
               </div>
             </div>
 
-            {/* Map placeholder */}
-            <div className="h-64 bg-gradient-web3 rounded-lg flex items-center justify-center">
-              <p className="text-white">Map Integration</p>
-            </div>
           </motion.div>
         </div>
       </div>
