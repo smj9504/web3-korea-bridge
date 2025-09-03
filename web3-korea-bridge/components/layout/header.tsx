@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import { Menu, X, Globe, ChevronDown } from 'lucide-react'
 import { cn } from '@/lib/utils'
-import { useTranslations, useLocale, setLocale } from '@/lib/translations'
+import { useTranslations, useLocale } from 'next-intl'
 
 export function Header() {
   const pathname = usePathname()
@@ -20,8 +20,11 @@ export function Header() {
 
   // Determine if current page should use dark text (black) or light text (white/light)
   // Use dark text on all pages when not scrolled or on specific pages
-  const isDarkTextPage = pathname.includes('/about') || pathname.includes('/services') || pathname.includes('/blog') || pathname.includes('/contact')
+  const isDarkTextPage = pathname.includes('/about') || pathname.includes('/services') || pathname.includes('/portfolio') || pathname.includes('/blog') || pathname.includes('/contact')
   const isLightTextPage = !isDarkTextPage
+  
+  // Pages that should have more opaque white background
+  const isOpaqueWhitePage = pathname.includes('/portfolio') || pathname.includes('/blog') || pathname.includes('/contact')
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,24 +36,21 @@ export function Header() {
 
   // 네비게이션 메뉴 항목
   const navItems = [
-    { href: '/', label: t('home') },
-    { href: '/about', label: t('about') },
-    { href: '/services', label: t('services') },
-    { href: '/blog', label: t('blog') },
-    // { href: '/news', label: t('news') }, // News 비활성화
-    { href: '/contact', label: t('contact') },
+    { href: `/${currentLocale}`, label: t('home') },
+    { href: `/${currentLocale}/about`, label: t('about') },
+    { href: `/${currentLocale}/services`, label: t('services') },
+    { href: `/${currentLocale}/portfolio`, label: t('portfolio') },
+    { href: `/${currentLocale}/blog`, label: t('blog') },
+    // { href: `/${currentLocale}/news`, label: t('news') }, // News 비활성화
+    { href: `/${currentLocale}/contact`, label: t('contact') },
   ]
 
   const switchLocale = (newLocale: 'ko' | 'en') => {
-    setLocale(newLocale)
-    
     // 언어 변경 시 라우팅 처리
     const currentPath = pathname.replace(/^\/(en|ko)/, '')
-    const newPath = newLocale === 'ko' 
-      ? currentPath || '/' 
-      : `/${newLocale}${currentPath}`
+    const newPath = `/${newLocale}${currentPath}`
     
-    // Next.js 클라이언트 사이드 라우팅 사용 (새로고침 없이)
+    // Next.js 클라이언트 사이드 라우팅 사용
     router.push(newPath)
     setIsLangMenuOpen(false)
   }
@@ -71,20 +71,24 @@ export function Header() {
     <header
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-        isDarkTextPage
+        isOpaqueWhitePage
           ? isScrolled
-            ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200'
-            : 'bg-white/80 backdrop-blur-sm'
-          : isScrolled
-            ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200'
-            : 'bg-white/10 backdrop-blur-sm'
+            ? 'bg-white shadow-lg border-b border-gray-200'
+            : 'bg-white/95 backdrop-blur-sm'
+          : isDarkTextPage
+            ? isScrolled
+              ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200'
+              : 'bg-white/80 backdrop-blur-sm'
+            : isScrolled
+              ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200'
+              : 'bg-white/10 backdrop-blur-sm'
       )}
     >
       <nav className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link
-            href="/"
+            href={`/${currentLocale}`}
             className="flex items-center space-x-2 font-bold text-xl lg:text-2xl transition-transform hover:scale-105"
           >
             <span className="font-bold text-blue-600">Web3</span>
@@ -180,7 +184,7 @@ export function Header() {
 
             {/* CTA Button */}
             <Link
-              href="/contact"
+              href={`/${currentLocale}/contact`}
               className="btn-primary transition-all duration-200 hover:scale-105 hover:shadow-lg"
             >
               {tHero('cta.primary')}
@@ -285,7 +289,7 @@ export function Header() {
               
               {/* Mobile CTA Button */}
               <Link
-                href="/contact"
+                href={`/${currentLocale}/contact`}
                 className="block w-full btn-primary text-center"
                 onClick={() => setIsMobileMenuOpen(false)}
               >

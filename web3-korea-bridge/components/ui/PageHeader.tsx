@@ -17,21 +17,22 @@ export default function PageHeader({
   children,
 }: PageHeaderProps) {
   return (
-    <section className={cn('py-20 bg-gradient-to-br from-blue-600 to-purple-600 text-white', className)}>
-      <div className="container mx-auto px-4">
+    <section className={cn('relative py-20 bg-gradient-to-br from-blue-600 to-purple-600 text-white', className)}>
+      <div className="absolute inset-0 bg-black/20" />
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {badge ? (
             <span className="inline-block px-4 py-2 mb-6 text-sm font-semibold bg-white/20 rounded-full backdrop-blur-sm">
               {badge}
             </span>
           ) : (
-            <div className="mb-6 h-10"></div>
+            <div className="mb-6 h-16"></div>
           )}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             {title}
           </h1>
           {subtitle && (
-            <p className="text-xl md:text-2xl text-white/90">
+            <p className="text-xl md:text-2xl text-white/90 mb-12">
               {subtitle}
             </p>
           )}

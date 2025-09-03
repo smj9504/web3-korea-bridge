@@ -826,5 +826,24 @@
     "back": "Back",
     "next": "Next",
     "previous": "Previous"
+  },
+  "portfolio": {
+    "title": "Success Stories & Portfolio",
+    "subtitle": "Stories of companies that succeeded with Web3 Korea Bridge",
+    "meta": {
+      "title": "Portfolio - Web3 Korea Bridge",
+      "description": "Explore our successful case studies and client achievements in the Korean Web3 market"
+    },
+    "stats": {
+      "projects": "Projects",
+      "investment": "Total Investment",
+      "partnerships": "Partnerships",
+      "successRate": "Success Rate"
+    },
+    "cta": {
+      "title": "Ready to Write Your Success Story?",
+      "subtitle": "Join the growing list of companies that have successfully entered the Korean market with our support",
+      "button": "Start Your Journey"
+    }
   }
 }

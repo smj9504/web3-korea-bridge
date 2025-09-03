@@ -826,5 +826,24 @@
     "back": "뒤로가기",
     "next": "다음",
     "previous": "이전"
+  },
+  "portfolio": {
+    "title": "성공 사례 & 포트폴리오",
+    "subtitle": "Web3 Korea Bridge와 함께 성공한 기업들의 이야기",
+    "meta": {
+      "title": "포트폴리오 - Web3 Korea Bridge",
+      "description": "한국 Web3 시장에서 성공한 클라이언트들의 사례와 성과를 확인하세요"
+    },
+    "stats": {
+      "projects": "프로젝트",
+      "investment": "총 투자 유치",
+      "partnerships": "파트너십",
+      "successRate": "성공률"
+    },
+    "cta": {
+      "title": "당신의 성공 스토리를 써보세요",
+      "subtitle": "우리의 지원으로 한국 시장에 성공적으로 진출한 기업들과 함께하세요",
+      "button": "시작하기"
+    }
   }
 }
