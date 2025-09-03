@@ -228,24 +228,24 @@ export function HeroSection() {
               <span className="text-sm font-medium">Web3 비즈니스 파트너</span>
             </div>
           </motion.div>
-        </motion.div>
 
-        {/* Enhanced Scroll Indicator */}
-        <motion.div
-          variants={scrollIndicatorVariants}
-          initial="hidden"
-          animate="visible"
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer"
-          onClick={handleScrollDown}
-          role="button"
-          aria-label="스크롤하여 다음 섹션 보기"
-          tabIndex={0}
-          onKeyDown={handleKeyDown}
-        >
-          <div className="flex flex-col items-center space-y-2 text-white/70 hover:text-white transition-colors group">
-            <span className="text-sm font-medium">Scroll Down</span>
-            <ChevronDown className="h-8 w-8 animate-bounce group-hover:animate-pulse" />
-          </div>
+          {/* Enhanced Scroll Indicator */}
+          <motion.div
+            variants={scrollIndicatorVariants}
+            initial="hidden"
+            animate="visible"
+            className="mt-12 cursor-pointer"
+            onClick={handleScrollDown}
+            role="button"
+            aria-label="스크롤하여 다음 섹션 보기"
+            tabIndex={0}
+            onKeyDown={handleKeyDown}
+          >
+            <div className="flex flex-col items-center space-y-2 text-white/70 hover:text-white transition-colors group">
+              <span className="text-sm font-medium">Scroll Down</span>
+              <ChevronDown className="h-8 w-8 animate-bounce group-hover:animate-pulse" />
+            </div>
+          </motion.div>
         </motion.div>
       </div>
 

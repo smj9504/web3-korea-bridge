@@ -1,0 +1,6 @@
+export { AboutHero } from './about-hero'
+export { VisionMission } from './vision-mission'
+export { CoreValues } from './core-values'
+export { FounderIntro } from './founder-intro'
+export { CompanyHistory } from './company-history'
+export { Partnerships } from './partnerships'

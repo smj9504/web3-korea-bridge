@@ -8,6 +8,54 @@
     "news": "뉴스",
     "contact": "문의하기"
   },
+  "news": {
+    "title": "뉴스 센터",
+    "subtitle": "Web3 Korea Bridge의 최신 소식과 업계 동향을 확인하세요",
+    "meta": {
+      "title": "뉴스 센터 - Web3 Korea Bridge",
+      "description": "Web3 Korea Bridge의 최신 소식과 업계 동향을 확인하세요. 한국 Web3 시장 진출을 위한 최신 뉴스와 인사이트를 제공합니다."
+    },
+    "featured": "주요 뉴스",
+    "breaking": "속보",
+    "breakingNews": "속보",
+    "allNews": "모든 뉴스",
+    "categories": {
+      "all": "전체",
+      "company": "회사 소식",
+      "industry": "업계 동향",
+      "partnership": "파트너십",
+      "event": "이벤트",
+      "regulation": "규제"
+    },
+    "readMore": "자세히 보기",
+    "readFullArticle": "전체 기사 읽기",
+    "source": "출처",
+    "relatedNews": "관련 뉴스",
+    "shareArticle": "공유하기",
+    "copyLink": "링크 복사",
+    "copied": "복사됨!",
+    "backToNews": "뉴스 목록으로",
+    "newsletter": {
+      "title": "뉴스레터 구독",
+      "subtitle": "최신 Web3 뉴스와 인사이트를 이메일로 받아보세요",
+      "placeholder": "이메일 주소",
+      "button": "구독하기"
+    },
+    "quickLinks": {
+      "title": "빠른 링크",
+      "pressKit": "프레스 키트",
+      "mediaContact": "미디어 문의",
+      "newsletter": "뉴스레터 구독"
+    },
+    "filterBy": "카테고리 필터",
+    "filteredBy": "필터 적용됨",
+    "clear": "초기화",
+    "articles": "개의 기사",
+    "noNews": "선택한 카테고리에 뉴스가 없습니다.",
+    "tags": "태그",
+    "stayUpdated": "최신 소식 받기",
+    "stayUpdatedDesc": "뉴스레터를 구독하고 Web3 업계 소식을 받아보세요"
+  },
   "hero": {
     "title": "Connect the World of Web3 to Korea",
     "subtitle": "해외 Web3 기업의 한국 진출, 성공의 가장 빠른 길",
@@ -18,8 +66,367 @@
     }
   },
   "services": {
-    "title": "Our Services",
-    "subtitle": "Web3 Korea Bridge와 함께 한국 시장을 개척하세요",
+    "title": "서비스 소개",
+    "subtitle": "한국 시장 진출을 위한 종합적인 Web3 기업 지원 서비스",
+    "description": "15년간의 대기업 경험과 전문 지식을 바탕으로 성공적인 한국 시장 진출을 위한 엔드투엔드 솔루션을 제공합니다.",
+    "badge": "서비스",
+    "hero": {
+      "stats": {
+        "experience": "년 경험",
+        "experienceDesc": "대기업 재무/전략 전문 경험",
+        "partners": "파트너 기업",
+        "partnersDesc": "성공적인 파트너십 중개 실적",
+        "success": "성공률",
+        "successDesc": "고객 만족도 및 성공률"
+      }
+    },
+    "cta": {
+      "primary": "여정 시작하기",
+      "secondary": "자세히 보기"
+    },
+    "categories": {
+      "badge": "서비스 카테고리",
+      "title": "Web3 시장 진출을 위한 종합 서비스",
+      "subtitle": "시장 분석부터 비즈니스 성장까지, 한국 시장 여정의 모든 단계를 지원합니다",
+      "keyFeatures": "주요 특징",
+      "estimatedDuration": "예상 기간",
+      "learnMore": "자세히 보기",
+      "marketEntry": {
+        "title": "시장 진입 전략",
+        "description": "Web3 기업을 위한 맞춤형 한국 시장 분석 및 전략적 진입 계획 수립",
+        "features": [
+          "한국 Web3 시장 현황 분석",
+          "경쟁 포지셔닝 전략",
+          "규제 컴플라이언스 로드맵",
+          "시장 진출 전략 개발"
+        ],
+        "process": [
+          "시장 조사 및 분석",
+          "경쟁 환경 매핑",
+          "전략 개발",
+          "실행 계획 수립"
+        ],
+        "duration": "4-6주",
+        "whyChooseUs": [
+          "깊이 있는 한국 시장 지식",
+          "Web3 업계 전문성",
+          "검증된 성공 실적"
+        ]
+      },
+      "legalSetup": {
+        "title": "법인 설립 지원",
+        "description": "한국 내 법적 기반 구축을 위한 완전한 지원, 법인 설립 및 라이선스 취득 포함",
+        "features": [
+          "한국 법인 설립",
+          "사업자 라이선스 취득",
+          "규제 컴플라이언스 설정",
+          "법적 문서 지원"
+        ],
+        "process": [
+          "법적 구조 컨설팅",
+          "문서 준비",
+          "등록 절차",
+          "컴플라이언스 검증"
+        ],
+        "duration": "6-8주",
+        "whyChooseUs": [
+          "Web3 법적 전문성",
+          "간소화된 프로세스",
+          "지속적인 컴플라이언스 지원"
+        ]
+      },
+      "businessDev": {
+        "title": "비즈니스 개발",
+        "description": "한국 시장 성장 가속화를 위한 전략적 파트너십 구축 및 고객 확보",
+        "features": [
+          "전략적 파트너십 발굴",
+          "고객 확보 전략",
+          "비즈니스 네트워크 확장",
+          "계약 협상 지원"
+        ],
+        "process": [
+          "파트너십 기회 매핑",
+          "관계 구축",
+          "협상 중재",
+          "계약 성사 지원"
+        ],
+        "duration": "8-12주",
+        "whyChooseUs": [
+          "광범위한 한국 비즈니스 네트워크",
+          "검증된 파트너십 성공 경험",
+          "장기적 관계 중심 접근"
+        ]
+      },
+      "marketingPR": {
+        "title": "마케팅 & PR",
+        "description": "브랜드 인지도와 신뢰 구축을 위한 한국 시장 맞춤형 마케팅 전략 및 홍보",
+        "features": [
+          "한국 시장 포지셔닝",
+          "디지털 마케팅 전략",
+          "PR 및 미디어 관계",
+          "커뮤니티 구축"
+        ],
+        "process": [
+          "브랜드 포지셔닝 전략",
+          "마케팅 캠페인 개발",
+          "미디어 아웃리치",
+          "성과 최적화"
+        ],
+        "duration": "6-10주",
+        "whyChooseUs": [
+          "한국 소비자 인사이트",
+          "미디어 관계 네트워크",
+          "문화적 적응 전문성"
+        ]
+      },
+      "techSupport": {
+        "title": "기술 지원",
+        "description": "Web3 솔루션이 한국 표준을 충족하도록 하는 기술 컴플라이언스 및 현지화 지원",
+        "features": [
+          "한국 규제 컴플라이언스",
+          "기술 현지화",
+          "인프라 설정",
+          "보안 컴플라이언스"
+        ],
+        "process": [
+          "기술 요구사항 분석",
+          "현지화 구현",
+          "컴플라이언스 검증",
+          "시스템 최적화"
+        ],
+        "duration": "8-12주",
+        "whyChooseUs": [
+          "기술 규제 전문성",
+          "로컬 인프라 지식",
+          "보안 컴플라이언스 중점"
+        ]
+      },
+      "investment": {
+        "title": "투자 유치",
+        "description": "한국 투자자와의 연결 및 Web3 벤처의 한국 성장을 위한 자금 확보",
+        "features": [
+          "투자자 네트워크 접근",
+          "펀딩 전략 개발",
+          "피치덱 최적화",
+          "실사 지원"
+        ],
+        "process": [
+          "펀딩 니즈 평가",
+          "투자자 매칭",
+          "피치 준비",
+          "투자 중개"
+        ],
+        "duration": "12-16주",
+        "whyChooseUs": [
+          "광범위한 투자자 네트워크",
+          "검증된 펀딩 성공 경험",
+          "전문가 딜 구조화"
+        ]
+      },
+      "cta": {
+        "title": "한국 시장 진출 준비가 되셨나요?",
+        "description": "귀하의 니즈에 가장 적합한 서비스를 선택하시거나, Web3 기업을 위한 맞춤형 솔루션을 제안받으세요.",
+        "button": "맞춤 견적 받기"
+      }
+    },
+    "contact": {
+      "badge": "시작하기",
+      "title": "한국 시장 진출 준비가 되셨나요?",
+      "subtitle": "한국 시장 성공을 향한 첫 걸음을 내딛어보세요. 저희 팀이 시장 진출의 모든 측면을 도와드릴 준비가 되어 있습니다.",
+      "howToStart": {
+        "title": "시작하는 방법",
+        "description": "한국 시장 여정을 시작하는 가장 좋은 방법을 선택하세요. 연결하고 성공을 계획하기 위한 여러 방법을 제공합니다."
+      },
+      "methods": {
+        "consultation": {
+          "title": "무료 컨설테이션",
+          "description": "무료 30분 컨설테이션에서 맞춤형 조언과 시장 인사이트를 받아보세요.",
+          "action": "컨설테이션 예약"
+        },
+        "meeting": {
+          "title": "전략 미팅",
+          "description": "예비 한국 시장 진출 전략 개발을 위한 심층 세션입니다.",
+          "action": "전략 세션 예약"
+        },
+        "email": {
+          "title": "이메일 문의",
+          "description": "질문과 비즈니스 세부사항을 보내주시면 상세한 서면 응답을 드립니다.",
+          "action": "문의 보내기"
+        }
+      },
+      "benefits": {
+        "title": "받으실 수 있는 것들",
+        "freeConsultation": "무료 초기 컨설테이션 및 시장 평가",
+        "customizedStrategy": "비즈니스 모델에 기반한 맞춤형 시장 진출 전략",
+        "expertiseAccess": "15년 이상의 대기업 및 M&A 전문성에 직접 접근",
+        "quickResponse": "모든 문의와 질문에 24시간 응답 시간"
+      },
+      "businessHours": "영업 시간",
+      "businessHoursValue": "월-금 오전 9시-오후 6시 KST",
+      "quickStats": {
+        "title": "저희를 선택하는 이유",
+        "responseTime": "응답 시간",
+        "consultation": "초기 컨설테이션",
+        "experience": "업계 경험",
+        "successRate": "고객 성공률"
+      },
+      "readyToStart": {
+        "title": "여정을 시작할 준비가 되셨나요?",
+        "description": "한국에서 성공적으로 운영되고 있는 Web3 기업들의 대열에 합류하세요.",
+        "button": "한국 시장 진출 시작하기"
+      }
+    },
+    "process": {
+      "badge": "진행 프로세스",
+      "title": "한국 시장 성공을 위한 여정",
+      "subtitle": "수많은 Web3 기업들이 한국에서 성공적으로 진출하고 성장할 수 있도록 도운 검증된 6단계 프로세스",
+      "consultation": {
+        "title": "초기 컨설테이션",
+        "description": "비즈니스 목표와 한국 시장 진출 계획 이해",
+        "details": [
+          "비즈니스 모델 분석",
+          "시장 진출 목표",
+          "자원 평가",
+          "타임라인 계획"
+        ],
+        "duration": "1주"
+      },
+      "analysis": {
+        "title": "시장 분석",
+        "description": "한국 Web3 환경과 기회에 대한 심층 분석",
+        "details": [
+          "시장 규모 및 트렌드",
+          "경쟁 분석",
+          "규제 환경",
+          "소비자 행동 인사이트"
+        ],
+        "duration": "2-3주"
+      },
+      "strategy": {
+        "title": "전략 개발",
+        "description": "맞춤형 한국 시장 진출 전략 수립",
+        "details": [
+          "시장 진출 전략",
+          "파트너십 발굴",
+          "리스크 완화 계획",
+          "성공 지표 정의"
+        ],
+        "duration": "2-4주"
+      },
+      "execution": {
+        "title": "실행",
+        "description": "전문가 가이드와 함께 시장 진출 계획 실행",
+        "details": [
+          "법인 설립",
+          "파트너십 협상",
+          "마케팅 런칭",
+          "운영 설정"
+        ],
+        "duration": "6-12주"
+      },
+      "partnership": {
+        "title": "파트너십 구축",
+        "description": "지속 가능한 성장을 위한 전략적 관계 구축",
+        "details": [
+          "파트너 발굴",
+          "관계 구축",
+          "계약 협상",
+          "파트너십 관리"
+        ],
+        "duration": "4-8주"
+      },
+      "growth": {
+        "title": "확장 & 성장",
+        "description": "시장 확장 및 최적화를 위한 지속적인 지원",
+        "details": [
+          "성과 모니터링",
+          "성장 전략 개선",
+          "시장 확장 계획",
+          "지속적인 최적화"
+        ],
+        "duration": "지속적"
+      },
+      "summary": {
+        "title": "여정 전반에 걸친 종합적인 지원",
+        "description": "엔드투엔드 프로세스를 통해 한국 시장 진출 과정에서 놓치는 세부사항이 없도록 보장합니다.",
+        "totalDuration": "일반적으로 3-6개월 소요",
+        "successRate": "95% 고객 성공률"
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "자주 묻는 질문",
+      "subtitle": "저희 서비스와 한국 시장 진출 프로세스에 대한 일반적인 질문들에 대한 답변을 확인하세요",
+      "categories": {
+        "all": "전체 질문",
+        "general": "일반",
+        "process": "프로세스",
+        "pricing": "가격",
+        "legal": "법률"
+      },
+      "general": {
+        "q1": {
+          "question": "Web3-Korea Bridge가 다른 컨설팅 회사와 다른 점은 무엇인가요?",
+          "answer": "15년간의 삼성전자 대기업 경험, PEF M&A 전문성, 그리고 Web3 기술과 한국 비즈니스 문화에 대한 깊은 이해의 독특한 조합이 저희를 차별화시킵니다. 저희는 일반적인 컨설팅 서비스가 아닌 Web3 기업에 특화된 엔드투엔드 솔루션을 제공합니다."
+        },
+        "q2": {
+          "question": "어떤 유형의 Web3 기업과 함께 일하시나요?",
+          "answer": "DeFi 프로토콜, NFT 플랫폼, 블록체인 인프라 제공업체, 암호화폐 거래소, GameFi 프로젝트, Web3 소셜 플랫폼을 포함한 다양한 Web3 기업과 협업합니다. 저희의 경험은 초기 스타트업부터 한국으로 확장하려는 기존 기업까지 아우릅니다."
+        },
+        "q3": {
+          "question": "일반적인 한국 시장 진출 프로세스는 얼마나 오래 걸리나요?",
+          "answer": "타임라인은 귀하의 특정 요구사항과 비즈니스 모델에 따라 다릅니다. 일반적으로 저희 고객들은 3-6개월 내에 초기 시장 진출을 보며, 완전한 운영 구축에는 6-12개월이 소요됩니다. 모든 법적 및 규제 요구사항이 적절히 해결되도록 하면서도 효율적으로 작업합니다."
+        }
+      },
+      "process": {
+        "q1": {
+          "question": "시장 진출 과정에서 한국을 방문해야 하나요?",
+          "answer": "항상 필요한 것은 아니지만, 프로세스 중 최소 한 번은 한국을 방문할 것을 강력히 권합니다. 대면 미팅은 한국 비즈니스 문화에서 매우 중요하며 파트너십 개발을 크게 가속화할 수 있습니다. 방문 기간 동안 모든 미팅을 준비하고 현지 지원을 제공할 수 있습니다."
+        },
+        "q2": {
+          "question": "어느 정도 수준의 한국어 지원을 제공하시나요?",
+          "answer": "전체 프로세스에 걸쳐 완전한 한국어 지원을 제공합니다. 모든 법률 문서, 비즈니스 커뮤니케이션, 협상은 저희 팀이 통역사 및 문화적 가교 역할을 하며 한국어로 진행될 수 있습니다. 저희와 함께 일하기 위해 한국어 능력이 필요하지 않습니다."
+        },
+        "q3": {
+          "question": "Web3 기업의 규제 컴플라이언스를 어떻게 보장하시나요?",
+          "answer": "한국 규제 기관과 긴밀한 관계를 유지하며 모든 Web3 관련 규제에 대해 최신 정보를 유지합니다. 저희 법률 파트너들은 블록체인 및 암호화폐 규제를 전문으로 하며, 귀하의 비즈니스가 현재 및 향후 모든 법적 요구사항 내에서 운영되도록 보장합니다."
+        }
+      },
+      "pricing": {
+        "q1": {
+          "question": "가격 구조는 어떻게 되나요?",
+          "answer": "저희의 가격은 귀하의 특정 요구사항과 작업 범위에 따라 맞춤화됩니다. 프로젝트 기반 가격과 리테이너 모델을 모두 제공합니다. 작업을 시작하기 전에 항상 투명한 가격이 포함된 상세한 제안서를 제공합니다. 초기 컨설테이션은 무료입니다."
+        },
+        "q2": {
+          "question": "중개하시는 파트너십에 대해 성공 수수료를 부과하시나요?",
+          "answer": "파트너십 중개의 경우 일반적으로 기본 수수료와 성공 기반 보상의 조합으로 작업합니다. 이는 저희의 인센티브를 귀하의 성공과 일치시킵니다. 정확한 구조는 관련된 파트너십의 범위와 복잡성에 따라 달라집니다."
+        },
+        "q3": {
+          "question": "어떤 결제 방법을 받으시나요?",
+          "answer": "전신송금 및 수표를 포함한 전통적인 결제 방법을 받습니다. Web3 기업의 경우 비트코인, 이더리움, USDC를 포함한 주요 암호화폐로도 결제를 받습니다. 결제 조건은 일반적으로 프로젝트 마일스톤을 중심으로 구성됩니다."
+        }
+      },
+      "legal": {
+        "q1": {
+          "question": "Web3 기업에게 어떤 법인 구조를 추천하시나요?",
+          "answer": "최적의 구조는 귀하의 비즈니스 모델에 따라 다르지만, 일반적으로 운영 활동을 위해 한국 자회사(LLC 또는 법인) 설립을 권장합니다. 일부 고객의 경우 지점이나 대표사무소 구조를 권할 수도 있습니다. 귀하의 특정 상황을 분석하여 최선의 접근 방법을 권장해드립니다."
+        },
+        "q2": {
+          "question": "한국 규제가 Web3 비즈니스에 어떤 영향을 미치나요?",
+          "answer": "한국은 암호화폐 거래소, 가상자산 서비스 제공업체, 블록체인 비즈니스에 대한 특정 규제가 있습니다. 규제 환경은 발전하고 있으며, 일반적으로 블록체인 혁신에 대한 정부의 긍정적인 지원이 있습니다. 저희는 이러한 규제를 탐색하고 완전한 컴플라이언스를 보장하도록 도와드립니다."
+        },
+        "q3": {
+          "question": "지속적인 법률 및 컴플라이언스 지원을 제공하시나요?",
+          "answer": "네, 저희는 파트너 로펌을 통해 지속적인 법률 및 컴플라이언스 지원을 제공합니다. 여기에는 규제 업데이트, 컴플라이언스 모니터링, 법률 문서 준비가 포함됩니다. 많은 고객들이 초기 시장 진출 후에도 지속적인 지원을 위해 저희를 유지합니다."
+        }
+      },
+      "stillHaveQuestions": {
+        "title": "아직 궁금한 점이 있으신가요?",
+        "description": "찾고 있는 답변을 찾을 수 없으신가요? 저희 팀이 한국 시장 진출에 대한 모든 구체적인 질문에 도움을 드릴 준비가 되어 있습니다.",
+        "contact": "문의하기",
+        "email": "이메일 보내기"
+      }
+    },
     "partnership": {
       "title": "파트너십 코디네이팅",
       "description": "대기업(IT/게임/엔터테인먼트)과의 전략적 파트너십 구축",
@@ -54,25 +461,63 @@
   "about": {
     "title": "About Us",
     "subtitle": "신뢰할 수 있는 Web3 비즈니스 파트너",
+    "badge": "회사소개",
+    "hero": {
+      "stats": {
+        "experience": "년 경험",
+        "partners": "파트너사",
+        "success": "성공률"
+      }
+    },
     "founder": {
       "title": "창업자 소개",
+      "subtitle": "경험과 전문성을 바탕으로 Web3 기업들의 성공을 이끌어갑니다.",
       "name": "창업자",
       "role": "CEO & Founder",
       "description": "삼성전자 15년 재무/전략 전문가",
+      "experienceTitle": "주요 경력",
+      "achievementsTitle": "전문 분야",
+      "quote": "15년간의 대기업 경험과 M&A 전문성을 바탕으로, Web3 기업들이 한국 시장에서 성공할 수 있도록 최선을 다하겠습니다. 함께 새로운 미래를 만들어 나가겠습니다.",
       "experience": [
         "삼성전자 글로벌 재무/전략 15년",
         "PEF M&A 전문가",
         "대기업 의사결정 구조 전문",
         "복잡한 재무 흐름 분석 전문"
-      ]
+      ],
+      "achievements": {
+        "corporate": "대기업 경험",
+        "corporateDesc": "삼성전자 15년 글로벌 재무/전략",
+        "finance": "M&A 전문성",
+        "financeDesc": "PEF M&A 딜 성사 전문가",
+        "expertise": "의사결정 구조",
+        "expertiseDesc": "대기업 의사결정 프로세스 전문가",
+        "analysis": "재무 분석",
+        "analysisDesc": "복잡한 재무 흐름 분석 전문가"
+      }
     },
     "vision": {
       "title": "비전 & 미션",
+      "description": "Web3-Korea Bridge의 비전과 미션을 소개합니다.",
+      "visionTitle": "비전",
+      "missionTitle": "미션",
       "vision": "글로벌 Web3 기업과 한국 시장을 연결하는 최고의 브릿지",
-      "mission": "전문성과 네트워크를 바탕으로 Web3 기업의 성공적인 한국 진출을 돕습니다"
+      "mission": "전문성과 네트워크를 바탕으로 Web3 기업의 성공적인 한국 진출을 돕습니다",
+      "commitment1": {
+        "title": "전문성",
+        "desc": "15년간의 대기업 경험과 전문 지식"
+      },
+      "commitment2": {
+        "title": "신뢰성",
+        "desc": "투명하고 정직한 비즈니스 파트너십"
+      },
+      "commitment3": {
+        "title": "혁신성",
+        "desc": "Web3 시대의 새로운 비즈니스 모델 창조"
+      }
     },
     "values": {
       "title": "핵심 가치",
+      "description": "Web3-Korea Bridge를 이끄는 핵심 가치들입니다.",
       "trust": {
         "title": "신뢰성 (Trust)",
         "description": "대기업 경험을 바탕으로 한 깊은 신뢰"
@@ -84,6 +529,92 @@
       "solution": {
         "title": "원스톱 솔루션 (One-Stop Solution)",
         "description": "진출부터 성장까지 모든 단계 지원"
+      },
+      "innovation": {
+        "title": "혁신성 (Innovation)",
+        "description": "Web3 시대에 맞는 혁신적인 솔루션 제공"
+      },
+      "commitment": {
+        "title": "우리의 약속",
+        "description": "이러한 핵심 가치를 바탕으로 Web3-Korea Bridge는 고객과 파트너에게 최고의 서비스를 제공하며, 함께 성장하는 동반자가 되겠습니다. 우리는 단순한 서비스 제공을 넘어서 진정한 파트너십을 통해 모든 이해관계자들과 함께 성공을 만들어 나가겠습니다."
+      }
+    },
+    "history": {
+      "title": "회사 연혁",
+      "subtitle": "Web3-Korea Bridge의 성장 여정과 주요 성과를 소개합니다.",
+      "milestone1": {
+        "title": "회사 설립",
+        "desc": "Web3-Korea Bridge 설립 및 서비스 개시"
+      },
+      "milestone2": {
+        "title": "첫 파트너십 성사",
+        "desc": "글로벌 Web3 기업과 한국 대기업 간 첫 파트너십 중개 성공"
+      },
+      "milestone3": {
+        "title": "서비스 확장",
+        "desc": "운영 컨설팅 및 이벤트 마케팅 서비스 론칭"
+      },
+      "milestone4": {
+        "title": "네트워크 확장",
+        "desc": "50+ 파트너사와의 네트워크 구축 및 다양한 성공 사례 창출"
+      },
+      "milestone5": {
+        "title": "해외 진출",
+        "desc": "동남아시아 및 북미 지역으로 서비스 확장 계획"
+      },
+      "status": {
+        "completed": "완료",
+        "inProgress": "진행중",
+        "planned": "예정"
+      },
+      "future": {
+        "title": "미래 비전",
+        "description": "Web3-Korea Bridge는 앞으로도 지속적인 성장을 통해 글로벌 Web3 기업들의 아시아 진출 허브로 자리잡고자 합니다. 더 많은 성공 사례를 만들어 Web3 생태계 발전에 기여하겠습니다."
+      },
+      "goals": {
+        "partners": "파트너사",
+        "countries": "진출 국가",
+        "deals": "딜 규모"
+      }
+    },
+    "partnerships": {
+      "title": "파트너십 네트워크",
+      "subtitle": "신뢰할 수 있는 파트너들과 함께 Web3 생태계를 확장해 나가고 있습니다.",
+      "enterprise": {
+        "title": "대기업 파트너",
+        "description": "IT, 게임, 엔터테인먼트 분야의 주요 한국 대기업들"
+      },
+      "web3": {
+        "title": "Web3 기업",
+        "description": "블록체인, DeFi, NFT 분야의 글로벌 Web3 기업들"
+      },
+      "institutional": {
+        "title": "기관 투자자",
+        "description": "VC, PEF, 패밀리오피스 등 투자 기관들"
+      },
+      "achievements": {
+        "deals": "성사된 딜",
+        "dealsDesc": "성공적으로 중개한 파트너십",
+        "value": "총 딜 가치",
+        "valueDesc": "누적 파트너십 규모",
+        "satisfaction": "고객 만족도",
+        "satisfactionDesc": "파트너사 만족도"
+      },
+      "process": {
+        "title": "파트너십 프로세스",
+        "step1": "니즈 분석",
+        "step1Desc": "고객의 요구사항과 목표 분석",
+        "step2": "파트너 매칭",
+        "step2Desc": "최적의 파트너 후보 선별",
+        "step3": "협상 중재",
+        "step3Desc": "양측 간 협상 진행 및 중재",
+        "step4": "성사 지원",
+        "step4Desc": "계약 체결 및 후속 관리"
+      },
+      "cta": {
+        "title": "함께 파트너십을 만들어가세요",
+        "description": "Web3-Korea Bridge와 함께 새로운 비즈니스 기회를 발견하고, 성공적인 파트너십을 구축하세요.",
+        "button": "파트너십 문의하기"
       }
     }
   },
@@ -99,30 +630,166 @@
     }
   },
   "blog": {
-    "title": "Blog & News",
-    "subtitle": "Web3 Korea Bridge의 최신 소식과 인사이트",
+    "title": "블로그 & 인사이트",
+    "subtitle": "Web3, 블록체인, 한국 시장에 대한 전문가 인사이트와 분석",
+    "meta": {
+      "title": "블로그 - Web3 Korea Bridge",
+      "description": "Web3, 블록체인, 한국 시장에 대한 전문가 인사이트와 분석. Web3 기업의 한국 진출을 위한 최신 정보와 가이드."
+    },
+    "badge": "블로그",
     "readMore": "더 읽기",
-    "viewAll": "전체 보기"
+    "viewAll": "모든 글 보기",
+    "search": {
+      "placeholder": "글 검색...",
+      "button": "검색",
+      "noResults": "검색 결과가 없습니다.",
+      "resultsFor": "검색 결과"
+    },
+    "categories": {
+      "all": "전체 글",
+      "web3": "Web3",
+      "blockchain": "블록체인",
+      "korea-market": "한국 시장",
+      "regulation": "규제",
+      "technology": "기술",
+      "partnership": "파트너십"
+    },
+    "post": {
+      "author": "작성자",
+      "publishedOn": "게시일",
+      "readingTime": "분 읽기",
+      "share": "공유",
+      "shareOn": "공유하기",
+      "copyLink": "링크 복사",
+      "linkCopied": "링크가 클립보드에 복사되었습니다!",
+      "relatedPosts": "관련 글",
+      "backToBlog": "블로그로 돌아가기",
+      "tableOfContents": "목차"
+    },
+    "filters": {
+      "sortBy": "정렬",
+      "latest": "최신순",
+      "popular": "인기순",
+      "featured": "추천"
+    },
+    "pagination": {
+      "previous": "이전",
+      "next": "다음",
+      "page": "페이지",
+      "of": "/",
+      "showing": "표시 중",
+      "articles": "개 글"
+    },
+    "newsletter": {
+      "title": "최신 소식 받기",
+      "description": "최신 Web3 및 한국 시장 인사이트를 이메일로 받아보세요.",
+      "placeholder": "이메일 주소 입력",
+      "button": "구독하기",
+      "success": "구독해 주셔서 감사합니다!",
+      "error": "문제가 발생했습니다. 다시 시도해 주세요."
+    },
+    "cta": {
+      "title": "한국 시장 진출 준비가 되셨나요?",
+      "description": "한국 맞춤형 Web3 시장 진출 전략에 대한 전문가 가이드를 받아보세요.",
+      "button": "지금 시작하기"
+    }
   },
   "contact": {
     "title": "Contact Us",
     "subtitle": "Web3 Korea Bridge와 함께 성장하세요",
+    "badge": "문의하기",
+    "meta": {
+      "title": "문의하기 - Web3 Korea Bridge",
+      "description": "한국 시장 진출 컨설팅, 파트너십, Web3 비즈니스 기회에 대해 Web3 Korea Bridge에 문의하세요."
+    },
     "form": {
+      "title": "문의 메시지 보내기",
       "company": "회사명",
+      "companyPlaceholder": "귀사의 회사명",
       "name": "담당자명",
+      "namePlaceholder": "성함을 입력해주세요",
       "email": "이메일",
+      "emailPlaceholder": "your@email.com",
       "phone": "전화번호",
+      "phonePlaceholder": "+82 10 1234 5678",
       "message": "문의 내용",
+      "messagePlaceholder": "프로젝트와 필요하신 도움에 대해 알려주세요...",
+      "inquiryType": "문의 유형",
+      "inquiryTypePlaceholder": "문의 유형 선택",
+      "inquiryTypes": {
+        "general": "일반 문의",
+        "partnership": "파트너십 기회",
+        "investment": "투자 및 펀딩",
+        "technical": "기술 지원"
+      },
+      "privacyAgree": "개인정보처리방침 및 이용약관에 동의합니다",
       "submit": "문의하기",
       "sending": "전송 중...",
-      "success": "문의가 성공적으로 전송되었습니다.",
-      "error": "전송 중 오류가 발생했습니다. 다시 시도해주세요."
+      "success": "문의가 성공적으로 전송되었습니다. 24시간 이내에 답변 드리겠습니다.",
+      "error": "전송 중 오류가 발생했습니다. 다시 시도하시거나 info@web3koreabridge.com으로 직접 연락 주세요."
     },
     "info": {
       "title": "연락처 정보",
       "email": "이메일",
       "phone": "전화",
-      "address": "주소"
+      "address": "주소",
+      "addressValue": "서울특별시, 대한민국",
+      "businessHours": "업무 시간",
+      "businessHoursValue": "월-금 오전 9:00 - 오후 6:00 KST",
+      "quickResponse": {
+        "title": "빠른 응답 보장",
+        "description": "영업일 기준 24시간 이내에 모든 문의에 답변드립니다."
+      },
+      "followUs": "팔로우하기",
+      "alternativeMethods": {
+        "title": "다른 연락 방법",
+        "exploreServices": "서비스 둘러보기",
+        "learnMore": "회사 소개"
+      }
+    },
+    "faq": {
+      "badge": "자주 묻는 질문",
+      "title": "일반적인 질문들",
+      "subtitle": "Web3 Korea Bridge 문의에 관한 자주 묻는 질문들의 답변을 확인하세요",
+      "q1": {
+        "question": "일반적인 문의 응답 시간은 얼마나 되나요?",
+        "answer": "영업일(월-금, 오전 9시-오후 6시 KST) 기준 24시간 이내에 모든 문의에 답변 드립니다. 긴급한 사안은 메시지에 표시해 주세요."
+      },
+      "q2": {
+        "question": "무료 상담을 제공하나요?",
+        "answer": "네, 귀사의 니즈를 파악하고 한국 시장 진출을 어떻게 도와드릴 수 있는지 논의하기 위해 30분 무료 초기 상담을 제공합니다."
+      },
+      "q3": {
+        "question": "어떤 언어를 지원하나요?",
+        "answer": "영어와 한국어로 완벽한 지원을 제공합니다. 특정 요구사항에 따라 중국어와 일본어도 지원 가능합니다."
+      },
+      "q4": {
+        "question": "화상 통화를 예약할 수 있나요?",
+        "answer": "물론입니다! 초기 문의 후 Zoom, Google Meet 또는 선호하시는 플랫폼을 통해 프로젝트를 자세히 논의할 수 있는 화상 통화를 예약할 수 있습니다."
+      },
+      "q5": {
+        "question": "문의 시 어떤 정보를 포함해야 하나요?",
+        "answer": "회사 배경, 한국 시장 진출 목표 일정, 관심 있는 특정 서비스, 직면한 특별한 과제 등을 포함해 주세요."
+      },
+      "moreQuestions": {
+        "title": "더 궁금한 점이 있으신가요?",
+        "description": "찾으시는 답변이 없으신가요? 구체적인 질문에 대해 도와드리겠습니다.",
+        "viewServices": "서비스 보기",
+        "learnMore": "더 알아보기"
+      }
+    },
+    "cta": {
+      "title": "한국 시장 진출 여정을 시작할 준비가 되셨나요?",
+      "subtitle": "저희가 한국에서 성공적으로 진출하고 성장하도록 도운 Web3 기업들과 함께하세요",
+      "primaryButton": "상담 시작하기",
+      "secondaryButton": "서비스 보기",
+      "officeHours": "업무 시간: 월요일 - 금요일, 오전 9:00 - 오후 6:00 KST",
+      "stats": {
+        "response": "응답 시간",
+        "consultation": "무료 상담",
+        "partners": "파트너 기업",
+        "success": "성공률"
+      }
     }
   },
   "footer": {

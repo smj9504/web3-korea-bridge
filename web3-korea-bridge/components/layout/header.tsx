@@ -72,8 +72,8 @@ export function Header() {
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
         isScrolled
-          ? 'glass-effect shadow-lg border-b border-white/20'
-          : 'bg-transparent'
+          ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200'
+          : 'bg-white/80 backdrop-blur-sm'
       )}
     >
       <nav className="container mx-auto px-4 lg:px-8">
@@ -83,11 +83,8 @@ export function Header() {
             href="/"
             className="flex items-center space-x-2 font-bold text-xl lg:text-2xl transition-transform hover:scale-105"
           >
-            <span className="gradient-text">Web3</span>
-            <span className={cn(
-              'transition-colors',
-              isScrolled ? 'text-foreground' : 'text-white'
-            )}>
+            <span className="font-bold text-blue-600">Web3</span>
+            <span className="text-gray-800">
               Korea Bridge
             </span>
           </Link>
@@ -101,10 +98,8 @@ export function Header() {
                 className={cn(
                   'text-sm font-medium transition-all duration-200 hover:scale-105 relative group',
                   pathname === item.href
-                    ? 'text-primary'
-                    : isScrolled 
-                      ? 'text-foreground hover:text-primary' 
-                      : 'text-white/90 hover:text-white',
+                    ? 'text-blue-600'
+                    : 'text-gray-700 hover:text-blue-600'
                 )}
               >
                 {item.label}
@@ -127,12 +122,7 @@ export function Header() {
                   e.stopPropagation()
                   setIsLangMenuOpen(!isLangMenuOpen)
                 }}
-                className={cn(
-                  'flex items-center space-x-2 px-3 py-2 text-sm font-medium transition-all duration-200 hover:scale-105 rounded-lg',
-                  isScrolled 
-                    ? 'text-foreground hover:bg-accent hover:text-primary' 
-                    : 'text-white/90 hover:bg-white/10 hover:text-white'
-                )}
+                className="flex items-center space-x-2 px-3 py-2 text-sm font-medium transition-all duration-200 hover:scale-105 rounded-lg text-gray-700 hover:bg-gray-100 hover:text-blue-600"
               >
                 <Globe className="w-4 h-4" />
                 <span>{currentLocale === 'ko' ? 'KO' : 'EN'}</span>
@@ -143,12 +133,12 @@ export function Header() {
               </button>
               
               {isLangMenuOpen && (
-                <div className="absolute right-0 mt-2 w-36 glass-effect rounded-lg shadow-lg py-2 z-50 border border-white/20">
+                <div className="absolute right-0 mt-2 w-36 bg-white rounded-lg shadow-lg py-2 z-50 border border-gray-200">
                   <button
                     onClick={() => switchLocale('ko')}
                     className={cn(
-                      'block w-full text-left px-4 py-2 text-sm transition-colors hover:bg-white/10 hover:text-primary',
-                      currentLocale === 'ko' && 'text-primary bg-primary/10'
+                      'block w-full text-left px-4 py-2 text-sm transition-colors hover:bg-gray-100 hover:text-blue-600',
+                      currentLocale === 'ko' ? 'text-blue-600 bg-blue-50' : 'text-gray-700'
                     )}
                   >
                     🇰🇷 한국어
@@ -156,8 +146,8 @@ export function Header() {
                   <button
                     onClick={() => switchLocale('en')}
                     className={cn(
-                      'block w-full text-left px-4 py-2 text-sm transition-colors hover:bg-white/10 hover:text-primary',
-                      currentLocale === 'en' && 'text-primary bg-primary/10'
+                      'block w-full text-left px-4 py-2 text-sm transition-colors hover:bg-gray-100 hover:text-blue-600',
+                      currentLocale === 'en' ? 'text-blue-600 bg-blue-50' : 'text-gray-700'
                     )}
                   >
                     🇺🇸 English
@@ -178,12 +168,7 @@ export function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={cn(
-              'lg:hidden p-2 rounded-lg transition-colors',
-              isScrolled 
-                ? 'text-foreground hover:bg-accent' 
-                : 'text-white hover:bg-white/10'
-            )}
+            className="lg:hidden p-2 rounded-lg transition-colors text-gray-700 hover:bg-gray-100"
           >
             {isMobileMenuOpen ? (
               <X className="w-6 h-6" />
@@ -195,7 +180,7 @@ export function Header() {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-white/20 glass-effect">
+          <div className="lg:hidden py-4 border-t border-gray-200 bg-white">
             <div className="space-y-2">
               {navItems.map((item) => (
                 <Link
@@ -204,8 +189,8 @@ export function Header() {
                   className={cn(
                     'block px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg',
                     pathname === item.href
-                      ? 'text-primary bg-primary/10'
-                      : 'text-foreground hover:bg-white/10 hover:text-primary'
+                      ? 'text-blue-600 bg-blue-50'
+                      : 'text-gray-700 hover:bg-gray-100 hover:text-blue-600'
                   )}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >

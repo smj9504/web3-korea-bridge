@@ -1,0 +1,14 @@
+{
+  "name": "Web3-Korea Bridge",
+  "short_name": "Web3-Korea",
+  "description": "해외 Web3 기업의 한국 진출 파트너",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "orientation": "portrait",
+  "scope": "/",
+  "lang": "ko",
+  "icons": [],
+  "categories": ["business", "finance", "productivity"]
+}

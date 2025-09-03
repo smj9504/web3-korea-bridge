@@ -8,6 +8,54 @@
     "news": "News",
     "contact": "Contact"
   },
+  "news": {
+    "title": "News Center",
+    "subtitle": "Stay updated with the latest news from Web3 Korea Bridge and industry trends",
+    "meta": {
+      "title": "News Center - Web3 Korea Bridge",
+      "description": "Stay updated with the latest news from Web3 Korea Bridge and industry trends. Get the latest insights on Web3 market entry into Korea."
+    },
+    "featured": "Featured News",
+    "breaking": "Breaking News",
+    "breakingNews": "Breaking News",
+    "allNews": "All News",
+    "categories": {
+      "all": "All",
+      "company": "Company News",
+      "industry": "Industry",
+      "partnership": "Partnership",
+      "event": "Event",
+      "regulation": "Regulation"
+    },
+    "readMore": "Read more",
+    "readFullArticle": "Read full article",
+    "source": "Source",
+    "relatedNews": "Related News",
+    "shareArticle": "Share this article",
+    "copyLink": "Copy Link",
+    "copied": "Copied!",
+    "backToNews": "Back to News",
+    "newsletter": {
+      "title": "Subscribe to Our Newsletter",
+      "subtitle": "Get the latest Web3 news and insights delivered to your inbox",
+      "placeholder": "Email address",
+      "button": "Subscribe"
+    },
+    "quickLinks": {
+      "title": "Quick Links",
+      "pressKit": "Press Kit",
+      "mediaContact": "Media Contact",
+      "newsletter": "Newsletter Subscription"
+    },
+    "filterBy": "Filter by Category",
+    "filteredBy": "Filtered by",
+    "clear": "Clear",
+    "articles": "articles",
+    "noNews": "No news found in the selected category.",
+    "tags": "Tags",
+    "stayUpdated": "Stay Updated",
+    "stayUpdatedDesc": "Subscribe to our newsletter for the latest Web3 news"
+  },
   "hero": {
     "title": "Connect the World of Web3 to Korea",
     "subtitle": "The fastest path to success for overseas Web3 companies entering Korea",
@@ -19,7 +67,366 @@
   },
   "services": {
     "title": "Our Services",
-    "subtitle": "Pioneer the Korean market with Web3 Korea Bridge",
+    "subtitle": "Comprehensive support for Web3 companies entering the Korean market",
+    "description": "With 15 years of corporate experience and specialized expertise, we provide end-to-end solutions for successful Korean market entry.",
+    "badge": "Services",
+    "hero": {
+      "stats": {
+        "experience": "Years Experience",
+        "experienceDesc": "Corporate finance & strategy expertise",
+        "partners": "Partner Companies",
+        "partnersDesc": "Successful partnerships facilitated",
+        "success": "Success Rate",
+        "successDesc": "Client satisfaction and success rate"
+      }
+    },
+    "cta": {
+      "primary": "Start Your Journey",
+      "secondary": "Learn More"
+    },
+    "categories": {
+      "badge": "Service Categories",
+      "title": "Comprehensive Services for Web3 Market Entry",
+      "subtitle": "From market analysis to business growth, we support every step of your Korean market journey",
+      "keyFeatures": "Key Features",
+      "estimatedDuration": "Duration",
+      "learnMore": "Learn More",
+      "marketEntry": {
+        "title": "Market Entry Strategy",
+        "description": "Comprehensive Korean market analysis and strategic entry planning tailored for Web3 companies.",
+        "features": [
+          "Korean Web3 market landscape analysis",
+          "Competitive positioning strategy",
+          "Regulatory compliance roadmap",
+          "Go-to-market strategy development"
+        ],
+        "process": [
+          "Market research and analysis",
+          "Competitive landscape mapping",
+          "Strategy development",
+          "Implementation planning"
+        ],
+        "duration": "4-6 weeks",
+        "whyChooseUs": [
+          "Deep Korean market knowledge",
+          "Web3 industry expertise",
+          "Proven track record"
+        ]
+      },
+      "legalSetup": {
+        "title": "Legal Entity Setup",
+        "description": "Complete support for establishing your legal presence in Korea, including corporate setup and license acquisition.",
+        "features": [
+          "Korean corporation establishment",
+          "Business license acquisition",
+          "Regulatory compliance setup",
+          "Legal documentation support"
+        ],
+        "process": [
+          "Legal structure consultation",
+          "Documentation preparation",
+          "Registration process",
+          "Compliance verification"
+        ],
+        "duration": "6-8 weeks",
+        "whyChooseUs": [
+          "Legal expertise in Web3",
+          "Streamlined processes",
+          "Ongoing compliance support"
+        ]
+      },
+      "businessDev": {
+        "title": "Business Development",
+        "description": "Strategic partnership building and customer acquisition to accelerate your Korean market growth.",
+        "features": [
+          "Strategic partnership identification",
+          "Customer acquisition strategy",
+          "Business network expansion",
+          "Deal negotiation support"
+        ],
+        "process": [
+          "Partnership opportunity mapping",
+          "Relationship building",
+          "Negotiation facilitation",
+          "Deal closure support"
+        ],
+        "duration": "8-12 weeks",
+        "whyChooseUs": [
+          "Extensive Korean business network",
+          "Proven partnership success",
+          "Long-term relationship focus"
+        ]
+      },
+      "marketingPR": {
+        "title": "Marketing & PR",
+        "description": "Korean market-specific marketing strategies and public relations to build brand awareness and trust.",
+        "features": [
+          "Korean market positioning",
+          "Digital marketing strategy",
+          "PR and media relations",
+          "Community building"
+        ],
+        "process": [
+          "Brand positioning strategy",
+          "Marketing campaign development",
+          "Media outreach",
+          "Performance optimization"
+        ],
+        "duration": "6-10 weeks",
+        "whyChooseUs": [
+          "Korean consumer insights",
+          "Media relationship network",
+          "Cultural adaptation expertise"
+        ]
+      },
+      "techSupport": {
+        "title": "Technical Support",
+        "description": "Technical compliance and localization support to ensure your Web3 solutions meet Korean standards.",
+        "features": [
+          "Korean regulatory compliance",
+          "Technical localization",
+          "Infrastructure setup",
+          "Security compliance"
+        ],
+        "process": [
+          "Technical requirements analysis",
+          "Localization implementation",
+          "Compliance verification",
+          "System optimization"
+        ],
+        "duration": "8-12 weeks",
+        "whyChooseUs": [
+          "Technical regulatory expertise",
+          "Local infrastructure knowledge",
+          "Security compliance focus"
+        ]
+      },
+      "investment": {
+        "title": "Investment & Funding",
+        "description": "Connect with Korean investors and secure funding for your Web3 venture's growth in Korea.",
+        "features": [
+          "Investor network access",
+          "Funding strategy development",
+          "Pitch deck optimization",
+          "Due diligence support"
+        ],
+        "process": [
+          "Funding needs assessment",
+          "Investor matching",
+          "Pitch preparation",
+          "Investment facilitation"
+        ],
+        "duration": "12-16 weeks",
+        "whyChooseUs": [
+          "Extensive investor network",
+          "Proven funding success",
+          "Expert deal structuring"
+        ]
+      },
+      "cta": {
+        "title": "Ready to Enter the Korean Market?",
+        "description": "Choose the services that best fit your needs, or let us create a custom solution for your Web3 company.",
+        "button": "Get Custom Quote"
+      }
+    },
+    "process": {
+      "badge": "Our Process",
+      "title": "Your Journey to Korean Market Success",
+      "subtitle": "A proven 6-step process that has helped numerous Web3 companies successfully enter and thrive in Korea",
+      "consultation": {
+        "title": "Initial Consultation",
+        "description": "Understanding your business goals and Korean market ambitions",
+        "details": [
+          "Business model analysis",
+          "Market entry objectives",
+          "Resource assessment",
+          "Timeline planning"
+        ],
+        "duration": "1 week"
+      },
+      "analysis": {
+        "title": "Market Analysis",
+        "description": "Deep dive into Korean Web3 landscape and opportunities",
+        "details": [
+          "Market size and trends",
+          "Competitive analysis",
+          "Regulatory environment",
+          "Consumer behavior insights"
+        ],
+        "duration": "2-3 weeks"
+      },
+      "strategy": {
+        "title": "Strategy Development",
+        "description": "Creating your customized Korean market entry strategy",
+        "details": [
+          "Go-to-market strategy",
+          "Partnership identification",
+          "Risk mitigation planning",
+          "Success metrics definition"
+        ],
+        "duration": "2-4 weeks"
+      },
+      "execution": {
+        "title": "Implementation",
+        "description": "Executing your market entry plan with expert guidance",
+        "details": [
+          "Legal entity establishment",
+          "Partnership negotiations",
+          "Marketing launch",
+          "Operational setup"
+        ],
+        "duration": "6-12 weeks"
+      },
+      "partnership": {
+        "title": "Partnership Building",
+        "description": "Establishing strategic relationships for sustainable growth",
+        "details": [
+          "Partner identification",
+          "Relationship building",
+          "Contract negotiations",
+          "Partnership management"
+        ],
+        "duration": "4-8 weeks"
+      },
+      "growth": {
+        "title": "Scale & Growth",
+        "description": "Ongoing support for market expansion and optimization",
+        "details": [
+          "Performance monitoring",
+          "Growth strategy refinement",
+          "Market expansion planning",
+          "Continuous optimization"
+        ],
+        "duration": "Ongoing"
+      },
+      "summary": {
+        "title": "Comprehensive Support Throughout Your Journey",
+        "description": "Our end-to-end process ensures no detail is overlooked in your Korean market entry.",
+        "totalDuration": "3-6 months typical timeline",
+        "successRate": "95% client success rate"
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Get answers to common questions about our services and the Korean market entry process",
+      "categories": {
+        "all": "All Questions",
+        "general": "General",
+        "process": "Process",
+        "pricing": "Pricing",
+        "legal": "Legal"
+      },
+      "general": {
+        "q1": {
+          "question": "What makes Web3-Korea Bridge different from other consulting firms?",
+          "answer": "Our unique combination of 15 years of Samsung Electronics corporate experience, PEF M&A expertise, and deep understanding of both Web3 technology and Korean business culture sets us apart. We provide end-to-end solutions specifically tailored for Web3 companies, not generic consulting services."
+        },
+        "q2": {
+          "question": "Which types of Web3 companies do you work with?",
+          "answer": "We work with a wide range of Web3 companies including DeFi protocols, NFT platforms, blockchain infrastructure providers, crypto exchanges, GameFi projects, and Web3 social platforms. Our experience spans from early-stage startups to established companies looking to expand into Korea."
+        },
+        "q3": {
+          "question": "How long does the typical Korean market entry process take?",
+          "answer": "The timeline varies depending on your specific needs and business model. Typically, our clients see initial market entry within 3-6 months, with full operational establishment taking 6-12 months. We work efficiently while ensuring all legal and regulatory requirements are properly addressed."
+        }
+      },
+      "process": {
+        "q1": {
+          "question": "Do I need to visit Korea during the market entry process?",
+          "answer": "While not always required, we highly recommend at least one visit to Korea during the process. Face-to-face meetings are highly valued in Korean business culture and can significantly accelerate partnership development. We can arrange all meetings and provide local support during your visit."
+        },
+        "q2": {
+          "question": "What level of Korean language support do you provide?",
+          "answer": "We provide complete Korean language support throughout the entire process. All legal documents, business communications, and negotiations can be conducted in Korean with our team serving as interpreters and cultural bridges. You don't need any Korean language skills to work with us."
+        },
+        "q3": {
+          "question": "How do you ensure regulatory compliance for Web3 companies?",
+          "answer": "We maintain close relationships with Korean regulatory bodies and stay updated on all Web3-related regulations. Our legal partners specialize in blockchain and cryptocurrency regulations, ensuring your business operates within all current and upcoming legal requirements."
+        }
+      },
+      "pricing": {
+        "q1": {
+          "question": "How is your pricing structured?",
+          "answer": "Our pricing is customized based on your specific needs and scope of work. We offer both project-based pricing and retainer models. We always provide a detailed proposal with transparent pricing before beginning any work. Initial consultation is complimentary."
+        },
+        "q2": {
+          "question": "Do you charge success fees for partnerships you facilitate?",
+          "answer": "For partnership facilitation, we typically work on a combination of base fees and success-based compensation. This aligns our incentives with your success. The exact structure depends on the scope and complexity of the partnerships involved."
+        },
+        "q3": {
+          "question": "What payment methods do you accept?",
+          "answer": "We accept traditional payment methods including wire transfers and checks. For Web3 companies, we also accept payments in major cryptocurrencies including Bitcoin, Ethereum, and USDC. Payment terms are typically structured around project milestones."
+        }
+      },
+      "legal": {
+        "q1": {
+          "question": "What legal entity structure do you recommend for Web3 companies?",
+          "answer": "The optimal structure depends on your business model, but we typically recommend establishing a Korean subsidiary (LLC or corporation) for operational activities. For some clients, we may recommend a branch office or representative office structure. We'll analyze your specific situation and recommend the best approach."
+        },
+        "q2": {
+          "question": "How do Korean regulations affect Web3 businesses?",
+          "answer": "Korea has specific regulations for cryptocurrency exchanges, virtual asset service providers, and blockchain businesses. The regulatory environment is evolving, with generally positive government support for blockchain innovation. We help navigate these regulations and ensure full compliance."
+        },
+        "q3": {
+          "question": "Do you provide ongoing legal and compliance support?",
+          "answer": "Yes, we offer ongoing legal and compliance support through our partner law firms. This includes regulatory updates, compliance monitoring, and legal document preparation. Many of our clients retain us for ongoing support after their initial market entry."
+        }
+      },
+      "stillHaveQuestions": {
+        "title": "Still Have Questions?",
+        "description": "Can't find the answer you're looking for? Our team is here to help with any specific questions about your Korean market entry.",
+        "contact": "Contact Us",
+        "email": "Send Email"
+      }
+    },
+    "contact": {
+      "badge": "Get Started",
+      "title": "Ready to Enter the Korean Market?",
+      "subtitle": "Take the first step towards your Korean market success. Our team is ready to help you navigate every aspect of market entry.",
+      "howToStart": {
+        "title": "How to Get Started",
+        "description": "Choose the best way to begin your Korean market journey. We offer multiple ways to connect and start planning your success."
+      },
+      "methods": {
+        "consultation": {
+          "title": "Free Consultation",
+          "description": "Get personalized advice and market insights in a complimentary 30-minute consultation.",
+          "action": "Schedule Consultation"
+        },
+        "meeting": {
+          "title": "Strategy Meeting",
+          "description": "Deep-dive session to develop your preliminary Korean market entry strategy.",
+          "action": "Book Strategy Session"
+        },
+        "email": {
+          "title": "Email Inquiry",
+          "description": "Send us your questions and business details for a detailed written response.",
+          "action": "Send Inquiry"
+        }
+      },
+      "benefits": {
+        "title": "What You Get",
+        "freeConsultation": "Complimentary initial consultation and market assessment",
+        "customizedStrategy": "Customized market entry strategy based on your business model",
+        "expertiseAccess": "Direct access to 15+ years of corporate and M&A expertise",
+        "quickResponse": "24-hour response time for all inquiries and questions"
+      },
+      "businessHours": "Business Hours",
+      "businessHoursValue": "Mon-Fri 9AM-6PM KST",
+      "quickStats": {
+        "title": "Why Choose Us",
+        "responseTime": "Response Time",
+        "consultation": "Initial Consultation",
+        "experience": "Industry Experience",
+        "successRate": "Client Success Rate"
+      },
+      "readyToStart": {
+        "title": "Ready to Begin Your Journey?",
+        "description": "Join the growing number of Web3 companies successfully operating in Korea.",
+        "button": "Start Your Korean Market Entry"
+      }
+    },
     "partnership": {
       "title": "Partnership Coordinating",
       "description": "Strategic partnership building with major corporations (IT/Gaming/Entertainment)",
@@ -54,25 +461,63 @@
   "about": {
     "title": "About Us",
     "subtitle": "Your trusted Web3 business partner",
+    "badge": "About Us",
+    "hero": {
+      "stats": {
+        "experience": "Years Experience",
+        "partners": "Partners",
+        "success": "Success Rate"
+      }
+    },
     "founder": {
       "title": "Founder Introduction",
+      "subtitle": "Leading Web3 companies to success with experience and expertise.",
       "name": "Founder",
       "role": "CEO & Founder",
       "description": "15 years Samsung Electronics finance/strategy expert",
+      "experienceTitle": "Key Experience",
+      "achievementsTitle": "Areas of Expertise",
+      "quote": "With 15 years of corporate experience and M&A expertise, I will do my best to help Web3 companies succeed in the Korean market. Let's create a new future together.",
       "experience": [
         "15 years Samsung Electronics global finance/strategy",
         "PEF M&A specialist",
         "Corporate decision-making structure expert",
         "Complex financial flow analysis specialist"
-      ]
+      ],
+      "achievements": {
+        "corporate": "Corporate Experience",
+        "corporateDesc": "15 years Samsung Electronics global finance/strategy",
+        "finance": "M&A Expertise",
+        "financeDesc": "PEF M&A deal execution specialist",
+        "expertise": "Decision Structure",
+        "expertiseDesc": "Corporate decision-making process expert",
+        "analysis": "Financial Analysis",
+        "analysisDesc": "Complex financial flow analysis specialist"
+      }
     },
     "vision": {
       "title": "Vision & Mission",
+      "description": "Introducing the vision and mission of Web3-Korea Bridge.",
+      "visionTitle": "Vision",
+      "missionTitle": "Mission",
       "vision": "The premier bridge connecting global Web3 companies with the Korean market",
-      "mission": "We help Web3 companies successfully enter Korea with our expertise and network"
+      "mission": "We help Web3 companies successfully enter Korea with our expertise and network",
+      "commitment1": {
+        "title": "Expertise",
+        "desc": "15 years of corporate experience and professional knowledge"
+      },
+      "commitment2": {
+        "title": "Reliability",
+        "desc": "Transparent and honest business partnerships"
+      },
+      "commitment3": {
+        "title": "Innovation",
+        "desc": "Creating new business models for the Web3 era"
+      }
     },
     "values": {
       "title": "Core Values",
+      "description": "The core values that drive Web3-Korea Bridge.",
       "trust": {
         "title": "Trust",
         "description": "Deep trust based on corporate experience"
@@ -84,6 +529,92 @@
       "solution": {
         "title": "One-Stop Solution",
         "description": "Support from entry to growth at every stage"
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "Providing innovative solutions for the Web3 era"
+      },
+      "commitment": {
+        "title": "Our Promise",
+        "description": "Based on these core values, Web3-Korea Bridge provides the best service to customers and partners, and becomes a companion that grows together. We will create success with all stakeholders through genuine partnerships beyond simple service provision."
+      }
+    },
+    "history": {
+      "title": "Company History",
+      "subtitle": "Introducing the growth journey and major achievements of Web3-Korea Bridge.",
+      "milestone1": {
+        "title": "Company Establishment",
+        "desc": "Web3-Korea Bridge establishment and service launch"
+      },
+      "milestone2": {
+        "title": "First Partnership Success",
+        "desc": "Successful mediation of first partnership between global Web3 company and Korean enterprise"
+      },
+      "milestone3": {
+        "title": "Service Expansion",
+        "desc": "Launch of operations consulting and event marketing services"
+      },
+      "milestone4": {
+        "title": "Network Expansion",
+        "desc": "Building network with 50+ partners and creating various success stories"
+      },
+      "milestone5": {
+        "title": "Global Expansion",
+        "desc": "Service expansion plan to Southeast Asia and North America"
+      },
+      "status": {
+        "completed": "Completed",
+        "inProgress": "In Progress",
+        "planned": "Planned"
+      },
+      "future": {
+        "title": "Future Vision",
+        "description": "Web3-Korea Bridge aims to become the hub for global Web3 companies' Asian expansion through continuous growth. We will contribute to the development of the Web3 ecosystem by creating more success stories."
+      },
+      "goals": {
+        "partners": "Partners",
+        "countries": "Countries",
+        "deals": "Deal Size"
+      }
+    },
+    "partnerships": {
+      "title": "Partnership Network",
+      "subtitle": "We are expanding the Web3 ecosystem together with trusted partners.",
+      "enterprise": {
+        "title": "Enterprise Partners",
+        "description": "Major Korean enterprises in IT, Gaming, and Entertainment sectors"
+      },
+      "web3": {
+        "title": "Web3 Companies",
+        "description": "Global Web3 companies in blockchain, DeFi, and NFT sectors"
+      },
+      "institutional": {
+        "title": "Institutional Investors",
+        "description": "Investment institutions including VCs, PEFs, and family offices"
+      },
+      "achievements": {
+        "deals": "Deals Closed",
+        "dealsDesc": "Successfully mediated partnerships",
+        "value": "Total Deal Value",
+        "valueDesc": "Cumulative partnership scale",
+        "satisfaction": "Client Satisfaction",
+        "satisfactionDesc": "Partner satisfaction rate"
+      },
+      "process": {
+        "title": "Partnership Process",
+        "step1": "Needs Analysis",
+        "step1Desc": "Analysis of client requirements and goals",
+        "step2": "Partner Matching",
+        "step2Desc": "Selection of optimal partner candidates",
+        "step3": "Negotiation Mediation",
+        "step3Desc": "Negotiation progress and mediation between parties",
+        "step4": "Deal Support",
+        "step4Desc": "Contract execution and follow-up management"
+      },
+      "cta": {
+        "title": "Let's Build Partnerships Together",
+        "description": "Discover new business opportunities with Web3-Korea Bridge and build successful partnerships.",
+        "button": "Inquire About Partnership"
       }
     }
   },
@@ -99,30 +630,166 @@
     }
   },
   "blog": {
-    "title": "Blog & News",
-    "subtitle": "Latest news and insights from Web3 Korea Bridge",
+    "title": "Blog & Insights",
+    "subtitle": "Expert insights and analysis on Web3, blockchain, and the Korean market",
+    "meta": {
+      "title": "Blog - Web3 Korea Bridge",
+      "description": "Expert insights and analysis on Web3, blockchain, and the Korean market. Latest information and guides for Web3 companies entering Korea."
+    },
+    "badge": "Blog",
     "readMore": "Read More",
-    "viewAll": "View All"
+    "viewAll": "View All Articles",
+    "search": {
+      "placeholder": "Search articles...",
+      "button": "Search",
+      "noResults": "No articles found for your search.",
+      "resultsFor": "Search results for"
+    },
+    "categories": {
+      "all": "All Articles",
+      "web3": "Web3",
+      "blockchain": "Blockchain",
+      "korea-market": "Korea Market",
+      "regulation": "Regulation",
+      "technology": "Technology",
+      "partnership": "Partnership"
+    },
+    "post": {
+      "author": "By",
+      "publishedOn": "Published on",
+      "readingTime": "min read",
+      "share": "Share",
+      "shareOn": "Share on",
+      "copyLink": "Copy Link",
+      "linkCopied": "Link copied to clipboard!",
+      "relatedPosts": "Related Articles",
+      "backToBlog": "Back to Blog",
+      "tableOfContents": "Table of Contents"
+    },
+    "filters": {
+      "sortBy": "Sort by",
+      "latest": "Latest",
+      "popular": "Most Popular",
+      "featured": "Featured"
+    },
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next",
+      "page": "Page",
+      "of": "of",
+      "showing": "Showing",
+      "articles": "articles"
+    },
+    "newsletter": {
+      "title": "Stay Updated",
+      "description": "Get the latest Web3 and Korean market insights delivered to your inbox.",
+      "placeholder": "Enter your email",
+      "button": "Subscribe",
+      "success": "Thank you for subscribing!",
+      "error": "Something went wrong. Please try again."
+    },
+    "cta": {
+      "title": "Ready to Enter the Korean Market?",
+      "description": "Get expert guidance on Web3 market entry strategies tailored for Korea.",
+      "button": "Get Started Today"
+    }
   },
   "contact": {
     "title": "Contact Us",
     "subtitle": "Grow with Web3 Korea Bridge",
+    "badge": "Get in Touch",
+    "meta": {
+      "title": "Contact Us - Web3 Korea Bridge",
+      "description": "Get in touch with Web3 Korea Bridge for Korean market entry consultation, partnerships, and Web3 business opportunities."
+    },
     "form": {
+      "title": "Send Us a Message",
       "company": "Company Name",
+      "companyPlaceholder": "Your company name",
       "name": "Contact Person",
+      "namePlaceholder": "Your full name",
       "email": "Email",
+      "emailPlaceholder": "your@email.com",
       "phone": "Phone Number",
+      "phonePlaceholder": "+1 234 567 8900",
       "message": "Message",
+      "messagePlaceholder": "Tell us about your project and how we can help...",
+      "inquiryType": "Inquiry Type",
+      "inquiryTypePlaceholder": "Select inquiry type",
+      "inquiryTypes": {
+        "general": "General Inquiry",
+        "partnership": "Partnership Opportunity",
+        "investment": "Investment & Funding",
+        "technical": "Technical Support"
+      },
+      "privacyAgree": "I agree to the privacy policy and terms of service",
       "submit": "Send Inquiry",
       "sending": "Sending...",
-      "success": "Your inquiry has been sent successfully.",
-      "error": "An error occurred. Please try again."
+      "success": "Your inquiry has been sent successfully. We'll get back to you within 24 hours.",
+      "error": "An error occurred. Please try again or contact us directly at info@web3koreabridge.com"
     },
     "info": {
       "title": "Contact Information",
       "email": "Email",
       "phone": "Phone",
-      "address": "Address"
+      "address": "Address",
+      "addressValue": "Seoul, South Korea",
+      "businessHours": "Business Hours",
+      "businessHoursValue": "Mon-Fri 9:00 AM - 6:00 PM KST",
+      "quickResponse": {
+        "title": "Quick Response Guarantee",
+        "description": "We respond to all inquiries within 24 hours during business days."
+      },
+      "followUs": "Follow Us",
+      "alternativeMethods": {
+        "title": "Other Ways to Connect",
+        "exploreServices": "Explore Our Services",
+        "learnMore": "Learn About Us"
+      }
+    },
+    "faq": {
+      "badge": "Frequently Asked",
+      "title": "Common Questions",
+      "subtitle": "Find quick answers to common questions about contacting Web3 Korea Bridge",
+      "q1": {
+        "question": "What is the typical response time for inquiries?",
+        "answer": "We typically respond to all inquiries within 24 hours during business days (Monday-Friday, 9 AM - 6 PM KST). For urgent matters, please indicate so in your message."
+      },
+      "q2": {
+        "question": "Do you offer free consultations?",
+        "answer": "Yes, we offer a complimentary 30-minute initial consultation to understand your needs and discuss how we can help with your Korean market entry."
+      },
+      "q3": {
+        "question": "What languages do you support?",
+        "answer": "We provide full support in English and Korean. Our team can also accommodate Chinese and Japanese for specific requirements."
+      },
+      "q4": {
+        "question": "Can we schedule a video call?",
+        "answer": "Absolutely! After your initial inquiry, we can schedule a video call via Zoom, Google Meet, or your preferred platform to discuss your project in detail."
+      },
+      "q5": {
+        "question": "What information should I include in my inquiry?",
+        "answer": "Please include your company background, target timeline for Korean market entry, specific services you're interested in, and any particular challenges you're facing."
+      },
+      "moreQuestions": {
+        "title": "Still Have Questions?",
+        "description": "Can't find what you're looking for? We're here to help with any specific questions.",
+        "viewServices": "View Services",
+        "learnMore": "Learn More"
+      }
+    },
+    "cta": {
+      "title": "Ready to Start Your Korean Market Journey?",
+      "subtitle": "Join the growing number of successful Web3 companies we've helped enter and thrive in Korea",
+      "primaryButton": "Start Your Consultation",
+      "secondaryButton": "View Our Services",
+      "officeHours": "Office Hours: Monday - Friday, 9:00 AM - 6:00 PM KST",
+      "stats": {
+        "response": "Response Time",
+        "consultation": "Free Consultation",
+        "partners": "Partner Companies",
+        "success": "Success Rate"
+      }
     }
   },
   "footer": {
