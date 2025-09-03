@@ -63,6 +63,11 @@
     "cta": {
       "primary": "Contact Us",
       "secondary": "Explore Services"
+    },
+    "tags": {
+      "samsung": "15 Years Samsung Electronics",
+      "pef": "PEF M&A Expert",
+      "web3": "Web3 Business Partner"
     }
   },
   "services": {
@@ -618,17 +623,6 @@
       }
     }
   },
-  "portfolio": {
-    "title": "Portfolio",
-    "subtitle": "Successful project cases",
-    "viewDetails": "View Details",
-    "category": {
-      "all": "All",
-      "partnership": "Partnership",
-      "consulting": "Consulting",
-      "event": "Event"
-    }
-  },
   "blog": {
     "title": "Blog & Insights",
     "subtitle": "Expert insights and analysis on Web3, blockchain, and the Korean market",
@@ -830,6 +824,13 @@
   "portfolio": {
     "title": "Success Stories & Portfolio",
     "subtitle": "Stories of companies that succeeded with Web3 Korea Bridge",
+    "viewDetails": "View Details",
+    "category": {
+      "all": "All",
+      "partnership": "Partnership",
+      "consulting": "Consulting",
+      "event": "Event"
+    },
     "meta": {
       "title": "Portfolio - Web3 Korea Bridge",
       "description": "Explore our successful case studies and client achievements in the Korean Web3 market"

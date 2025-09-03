@@ -2,7 +2,7 @@
 
 import React from 'react'
 import Link from 'next/link'
-import { useTranslations, useLocale } from '@/lib/translations'
+import { useTranslations, useLocale } from 'next-intl'
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github, ArrowUp } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
@@ -19,12 +19,12 @@ export function Footer() {
 
   // Navigation links matching Header
   const navLinks = [
-    { href: '/', label: t('links.home') },
-    { href: '/about', label: t('links.about') },
-    { href: '/services', label: t('links.services') },
-    { href: '/portfolio', label: t('links.portfolio') },
-    { href: '/blog', label: t('links.blog') },
-    { href: '/contact', label: t('links.contact') }
+    { href: `/${locale}`, label: t('links.home') },
+    { href: `/${locale}/about`, label: t('links.about') },
+    { href: `/${locale}/services`, label: t('links.services') },
+    { href: `/${locale}/portfolio`, label: t('links.portfolio') },
+    { href: `/${locale}/blog`, label: t('links.blog') },
+    { href: `/${locale}/contact`, label: t('links.contact') }
   ]
 
   const servicesList = [
@@ -52,7 +52,7 @@ export function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-1 space-y-6">
             <div className="space-y-4">
-              <Link href="/" className="flex items-center space-x-3 group">
+              <Link href={`/${locale}`} className="flex items-center space-x-3 group">
                 <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-primary to-blue-600 flex items-center justify-center group-hover:scale-105 transition-transform" >
                   <span className="text-white font-bold text-lg">W3</span>
                 </div>

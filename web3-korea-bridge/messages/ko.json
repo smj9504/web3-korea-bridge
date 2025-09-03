@@ -63,6 +63,11 @@
     "cta": {
       "primary": "문의하기",
       "secondary": "서비스 살펴보기"
+    },
+    "tags": {
+      "samsung": "15년 삼성전자 경력",
+      "pef": "PEF M&A 전문가",
+      "web3": "Web3 비즈니스 파트너"
     }
   },
   "services": {

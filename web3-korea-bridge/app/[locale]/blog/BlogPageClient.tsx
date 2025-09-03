@@ -179,9 +179,12 @@ export function BlogPageClient({ locale, initialData }: BlogPageClientProps) {
               {t('cta.description')}
             </p>
             <Link href={`/${locale}/contact`}>
-              <Button size="lg" className="group">
+              <Button 
+                size="lg" 
+                className="group"
+                rightIcon={<ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />}
+              >
                 {t('cta.button')}
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
           </div>

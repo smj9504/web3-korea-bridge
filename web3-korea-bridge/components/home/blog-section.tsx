@@ -2,7 +2,7 @@
 
 import React from 'react'
 import Link from 'next/link'
-import { useTranslations, useLocale } from '@/lib/translations'
+import { useTranslations, useLocale } from 'next-intl'
 import { motion } from 'framer-motion'
 import { Calendar, User, ArrowRight, Clock } from 'lucide-react'
 import { blogPosts, getFeaturedPosts } from '@/lib/blog-data'

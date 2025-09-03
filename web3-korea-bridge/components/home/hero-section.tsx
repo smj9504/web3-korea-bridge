@@ -2,7 +2,7 @@
 
 import React, { useEffect, useCallback, useMemo } from 'react'
 import Link from 'next/link'
-import { useTranslations, useLocale } from '@/lib/translations'
+import { useTranslations, useLocale } from 'next-intl'
 import { motion, useAnimation, useReducedMotion, type Variants } from 'framer-motion'
 import { ArrowRight, ChevronDown, Sparkles, Globe, Zap } from 'lucide-react'
 
@@ -217,15 +217,15 @@ export function HeroSection() {
           >
             <div className="trust-indicator">
               <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
-              <span className="text-sm font-medium">15년 삼성전자 경력</span>
+              <span className="text-sm font-medium">{t('tags.samsung')}</span>
             </div>
             <div className="trust-indicator">
               <div className="w-2 h-2 bg-primary rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
-              <span className="text-sm font-medium">PEF M&A 전문가</span>
+              <span className="text-sm font-medium">{t('tags.pef')}</span>
             </div>
             <div className="trust-indicator">
               <div className="w-2 h-2 bg-primary rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
-              <span className="text-sm font-medium">Web3 비즈니스 파트너</span>
+              <span className="text-sm font-medium">{t('tags.web3')}</span>
             </div>
           </motion.div>
 

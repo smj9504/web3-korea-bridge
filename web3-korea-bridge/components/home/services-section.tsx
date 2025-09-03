@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { useTranslations } from '@/lib/translations'
+import { useTranslations } from 'next-intl'
 import { motion } from 'framer-motion'
 import { Handshake, Settings, Calendar } from 'lucide-react'
 
