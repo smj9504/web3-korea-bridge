@@ -104,12 +104,19 @@ export async function submitContactForm(
 
     const validatedData = validationResult.data
 
-    // 환경 변수 검증
+    // 환경 변수 검증 (상세 로깅)
+    console.log('=== Email Debug Info ===')
+    console.log('RESEND_API_KEY exists:', !!process.env.RESEND_API_KEY)
+    console.log('RESEND_API_KEY prefix:', process.env.RESEND_API_KEY?.substring(0, 10))
+    console.log('EMAIL_FROM:', process.env.EMAIL_FROM)
+    console.log('EMAIL_TO_ADMIN:', process.env.EMAIL_TO_ADMIN)
+    console.log('Node environment:', process.env.NODE_ENV)
+
     if (!process.env.RESEND_API_KEY) {
       console.error('RESEND_API_KEY is not configured')
       return {
         success: false,
-        message: '이메일 서비스 설정에 문제가 있습니다. 관리자에게 문의해주세요.'
+        message: '이메일 서비스 설정에 문제가 있습니다. (API_KEY 누락)'
       }
     }
 
@@ -117,26 +124,44 @@ export async function submitContactForm(
       console.error('EMAIL_TO_ADMIN is not configured')
       return {
         success: false,
-        message: '이메일 서비스 설정에 문제가 있습니다. 관리자에게 문의해주세요.'
+        message: '이메일 서비스 설정에 문제가 있습니다. (TO_ADMIN 누락)'
       }
     }
 
     // 이메일 전송
+    console.log('=== Preparing Email ===')
     const emailHtml = generateContactEmailHTML(validatedData)
     const emailSubject = generateContactEmailSubject(validatedData.name, validatedData.inquiryType)
-
-    const result = await resend.emails.send({
+    
+    const emailPayload = {
       from: process.env.EMAIL_FROM || 'onboarding@resend.dev',
       to: process.env.EMAIL_TO_ADMIN,
       subject: emailSubject,
       html: emailHtml,
+    }
+    
+    console.log('Email payload:', {
+      from: emailPayload.from,
+      to: emailPayload.to,
+      subject: emailPayload.subject,
+      htmlLength: emailHtml.length
+    })
+
+    console.log('=== Sending Email ===')
+    const result = await resend.emails.send(emailPayload)
+    
+    console.log('Resend response:', {
+      success: !result.error,
+      error: result.error,
+      data: result.data
     })
 
     if (result.error) {
       console.error('Email sending failed:', result.error)
+      console.error('Error details:', JSON.stringify(result.error, null, 2))
       return {
         success: false,
-        message: '이메일 전송에 실패했습니다. 잠시 후 다시 시도해주세요.'
+        message: `이메일 전송에 실패했습니다: ${result.error.message || 'Unknown error'}`
       }
     }
 
