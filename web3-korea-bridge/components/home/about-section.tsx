@@ -21,22 +21,15 @@ export function AboutSection() {
           >
             {/* Founder Photo */}
             <div className="flex-shrink-0">
-              <div className="relative w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-xl overflow-hidden bg-gradient-to-br from-primary/10 to-blue-600/10 border-2 border-primary/20">
-                <Image
-                  src="/images/founder-photo.jpg"
-                  alt="Founder"
-                  fill
-                  className="object-cover"
-                  priority
-                  onError={(e) => {
-                    // Fallback if image doesn't exist
-                    e.currentTarget.style.display = 'none'
-                  }}
-                />
-                {/* Placeholder if no image */}
-                <div className="absolute inset-0 flex items-center justify-center text-primary">
-                  <svg className="w-32 h-32" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
+              <div className="relative w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-xl overflow-hidden bg-gradient-to-br from-primary/10 to-blue-600/10 border-2 border-primary/20 flex items-center justify-center">
+                {/* Founder Avatar Placeholder */}
+                <div className="w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 rounded-full bg-gradient-to-br from-primary to-blue-600 flex items-center justify-center">
+                  <svg
+                    className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
                   </svg>
                 </div>
               </div>
