@@ -89,7 +89,7 @@ export function ServiceProcess() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <Badge variant="secondary" size="lg" className="mb-4">
+          <Badge variant="secondary" className="mb-4 px-4 py-2 text-sm">
             {t('badge')}
           </Badge>
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
@@ -146,7 +146,7 @@ export function ServiceProcess() {
                           </div>
                         ))}
                       </div>
-                      <Badge variant="outline" size="sm">
+                      <Badge variant="outline" className="px-2 py-1 text-xs">
                         {step.duration}
                       </Badge>
                     </CardContent>
@@ -193,7 +193,7 @@ export function ServiceProcess() {
                         <h3 className="text-lg font-bold group-hover:text-primary transition-colors">
                           {step.title}
                         </h3>
-                        <Badge variant="outline" size="sm">
+                        <Badge variant="outline" className="px-2 py-1 text-xs">
                           {step.duration}
                         </Badge>
                       </div>
@@ -233,10 +233,10 @@ export function ServiceProcess() {
                 {t('summary.description')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Badge variant="secondary" size="lg">
+                <Badge variant="secondary" className="px-4 py-2 text-sm">
                   {t('summary.totalDuration')}
                 </Badge>
-                <Badge variant="outline" size="lg">
+                <Badge variant="outline" className="px-4 py-2 text-sm">
                   {t('summary.successRate')}
                 </Badge>
               </div>

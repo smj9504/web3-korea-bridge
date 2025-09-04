@@ -36,7 +36,7 @@ export default function NewsPageClient({ locale }: NewsPageClientProps) {
   // Filter news by category
   const displayedNews = activeCategory === 'all' 
     ? allNews 
-    : getNewsByCategory(activeCategory);
+    : getNewsByCategory(activeCategory as NewsArticle['category']);
 
   return (
     <MainLayout>

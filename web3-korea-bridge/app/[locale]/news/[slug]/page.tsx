@@ -23,10 +23,10 @@ import {
 import { useState } from 'react';
 
 interface NewsDetailPageProps {
-  params: {
+  params: Promise<{
     locale: string;
     slug: string;
-  };
+  }>;
 }
 
 const categoryColors = {
@@ -54,7 +54,8 @@ const categoryLabels = {
   },
 };
 
-export default function NewsDetailPage({ params: { locale, slug } }: NewsDetailPageProps) {
+export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
+  const { locale, slug } = await params;
   const t = useTranslations();
   const [copied, setCopied] = useState(false);
   const isKorean = locale === 'ko';

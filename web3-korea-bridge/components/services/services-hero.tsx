@@ -47,7 +47,7 @@ export function ServicesHero() {
             transition={{ duration: 0.6 }}
             className="mb-6"
           >
-            <Badge variant="secondary" size="lg">
+            <Badge variant="secondary" className="px-4 py-2 text-sm">
               {t('badge')}
             </Badge>
           </motion.div>

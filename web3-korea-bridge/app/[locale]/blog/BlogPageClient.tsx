@@ -182,9 +182,9 @@ export function BlogPageClient({ locale, initialData }: BlogPageClientProps) {
               <Button 
                 size="lg" 
                 className="group"
-                rightIcon={<ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />}
               >
                 {t('cta.button')}
+                <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
           </div>

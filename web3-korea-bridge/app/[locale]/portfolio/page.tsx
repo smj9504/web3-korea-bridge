@@ -52,8 +52,8 @@ export default async function PortfolioPage({
             <Button 
               size="lg" 
               className="bg-white text-blue-600 hover:bg-gray-100 group"
-              leftIcon={<ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />}
             >
+              <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
               {t('cta.button')}
             </Button>
           </Link>

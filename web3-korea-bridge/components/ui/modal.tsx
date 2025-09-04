@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { cva, type VariantProps } from 'class-variance-authority'
 import { cn } from '@/lib/utils'
 import { X } from 'lucide-react'
-import { Button } from './Button'
+import { Button } from './button'
 
 const modalVariants = cva(
   'relative bg-background border rounded-lg shadow-lg',

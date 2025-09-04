@@ -50,10 +50,10 @@ export function BlogContent({ content, className }: BlogContentProps) {
 
     // Lists
     html = html.replace(/^\* (.+)/gim, '<li>$1</li>');
-    html = html.replace(/(<li>.*<\/li>)/s, '<ul class="list-disc pl-6 space-y-2">$1</ul>');
+    html = html.replace(/(<li>[\s\S]*<\/li>)/g, '<ul class="list-disc pl-6 space-y-2">$1</ul>');
     
     html = html.replace(/^\d+\. (.+)/gim, '<li>$1</li>');
-    html = html.replace(/(<li>.*<\/li>)/s, '<ol class="list-decimal pl-6 space-y-2">$1</ol>');
+    html = html.replace(/(<li>[\s\S]*<\/li>)/g, '<ol class="list-decimal pl-6 space-y-2">$1</ol>');
 
     // Code blocks
     html = html.replace(/```([^`]+)```/g, '<pre class="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg overflow-x-auto"><code>$1</code></pre>');

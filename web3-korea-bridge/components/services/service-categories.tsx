@@ -107,7 +107,7 @@ export function ServiceCategories() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <Badge variant="secondary" size="lg" className="mb-4">
+          <Badge variant="secondary" className="mb-4 px-4 py-2 text-sm">
             {t('badge')}
           </Badge>
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
@@ -130,9 +130,6 @@ export function ServiceCategories() {
             >
               <Card 
                 className="h-full group cursor-pointer transition-all duration-300 hover:shadow-xl hover:-translate-y-2 border-2 hover:border-primary/20"
-                animate
-                hover="lift"
-                variant="elevated"
               >
                 <CardHeader className="pb-4">
                   {/* Icon */}

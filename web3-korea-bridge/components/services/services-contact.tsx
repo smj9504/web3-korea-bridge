@@ -27,7 +27,7 @@ export function ServicesContact() {
       description: t('methods.consultation.description'),
       action: t('methods.consultation.action'),
       href: '#consultation',
-      variant: 'primary' as const
+      variant: 'default' as const
     },
     {
       icon: Calendar,
@@ -88,7 +88,7 @@ export function ServicesContact() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <Badge variant="secondary" size="lg" className="mb-4">
+          <Badge variant="secondary" className="mb-4 px-4 py-2 text-sm">
             {t('badge')}
           </Badge>
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
@@ -250,7 +250,7 @@ export function ServicesContact() {
                 <p className="text-muted-foreground mb-6">
                   {t('readyToStart.description')}
                 </p>
-                <Button size="lg" className="w-full group">
+                <Button  className="w-full group">
                   {t('readyToStart.button')}
                 </Button>
               </CardContent>

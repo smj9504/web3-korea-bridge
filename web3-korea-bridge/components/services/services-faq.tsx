@@ -125,7 +125,7 @@ export function ServicesFAQ() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <Badge variant="secondary" size="lg" className="mb-4">
+          <Badge variant="secondary" className="mb-4 px-4 py-2 text-sm">
             {t('badge')}
           </Badge>
           <h2 className="text-3xl md:text-5xl font-bold mb-6">

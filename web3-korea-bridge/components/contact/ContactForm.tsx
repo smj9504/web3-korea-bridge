@@ -232,8 +232,8 @@ export default function ContactForm({ locale }: ContactFormProps) {
           className="w-full"
           disabled={isSubmitting}
           size="lg"
-          leftIcon={isSubmitting ? <Loader2 className="h-4 w-4 animate-spin" /> : <Send className="h-4 w-4" />}
         >
+          {isSubmitting ? <Loader2 className="h-4 w-4 animate-spin" /> : <Send className="h-4 w-4" />}
           {isSubmitting ? t('sending') : t('submit')}
         </Button>
 

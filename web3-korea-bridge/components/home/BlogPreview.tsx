@@ -2,7 +2,7 @@
 
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
-import { Container } from '@/components/ui/Container';
+import { Container } from '@/components/layout/main-layout';
 import { Button } from '@/components/ui/button';
 import { BlogCard } from '@/components/blog/BlogCard';
 import { blogPosts, getFeaturedPosts } from '@/lib/blog-data';
