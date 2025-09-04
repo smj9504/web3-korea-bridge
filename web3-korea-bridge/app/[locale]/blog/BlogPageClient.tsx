@@ -8,7 +8,7 @@ import { BlogSearch } from '@/components/blog/BlogSearch';
 import { BlogFilter } from '@/components/blog/BlogFilter';
 import { BlogPagination } from '@/components/blog/BlogPagination';
 import { BlogNewsletter } from '@/components/blog/BlogNewsletter';
-import PageHeader from '@/components/ui/PageHeader';
+import PageHeader from '@/components/ui/pageheader';
 import { Container } from '@/components/layout/main-layout';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';

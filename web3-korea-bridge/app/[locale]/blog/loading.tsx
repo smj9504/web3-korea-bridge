@@ -1,4 +1,4 @@
-import PageHeader from '@/components/ui/PageHeader';
+import PageHeader from '@/components/ui/pageheader';
 import { Container } from '@/components/layout/main-layout';
 import { BlogCardSkeleton } from '@/components/ui/skeleton';
 
