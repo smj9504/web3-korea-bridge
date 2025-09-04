@@ -1,9 +1,10 @@
 // UI Components - Web3 Korea Bridge Design System
-// All components follow the established design tokens and patterns
 
 // Button Components
 export { Button, buttonVariants } from './button'
-export type { ButtonProps } from './button'
+
+// Badge Components
+export { Badge, badgeVariants } from './badge'
 
 // Card Components  
 export { 
@@ -15,29 +16,13 @@ export {
   CardContent
 } from './card'
 
-// Badge Components
-export { Badge, badgeVariants } from './badge'
-
 // Form Components
-export { Input } from './input'
+export { Input, Textarea, inputVariants } from './input'
+export { Label } from './label'
 
-// Container Components
+// Other Components
 export { default as Container } from './container'
+export { Skeleton } from './skeleton'
 
-// Modal Components
-export { 
-  Modal, 
-  ModalHeader, 
-  ModalFooter, 
-  ModalTitle, 
-  ModalDescription
-} from './modal'
-
-// Loading Components
-export { 
-  LoadingSpinner, 
-  Skeleton
-} from './loading'
-
-// Re-export class-variance-authority types for component consumers
+// Re-export class-variance-authority types
 export type { VariantProps } from 'class-variance-authority'
