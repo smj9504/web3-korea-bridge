@@ -117,10 +117,10 @@ export async function GET() {
               color: 'rgba(255, 255, 255, 0.8)',
             }}
           >
-            <span>✓ Consulting Services</span>
-            <span>✓ Market Research</span>
-            <span>✓ Legal Compliance</span>
-            <span>✓ Partnership Support</span>
+            <span>• Consulting Services</span>
+            <span>• Market Research</span>
+            <span>• Legal Compliance</span>
+            <span>• Partnership Support</span>
           </div>
         </div>
 
