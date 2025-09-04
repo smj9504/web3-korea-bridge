@@ -41,3 +41,11 @@ yarn-error.log*
 next-env.d.ts
 
 /lib/generated/prisma
+
+# Claude settings
+.claude/
+../.claude/
+
+# Documentation (local only)
+ARCHITECTURE.md
+DEPLOYMENT.md
