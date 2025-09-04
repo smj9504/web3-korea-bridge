@@ -1,24 +1,24 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
-/.pnp
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
+web3-korea-bridge/node_modules/
+web3-korea-bridge/.pnp
+web3-korea-bridge/.pnp.*
+web3-korea-bridge/.yarn/*
+!web3-korea-bridge/.yarn/patches
+!web3-korea-bridge/.yarn/plugins
+!web3-korea-bridge/.yarn/releases
+!web3-korea-bridge/.yarn/versions
 
 # testing
-/coverage
+web3-korea-bridge/coverage/
 
 # next.js
-/.next/
-/out/
+web3-korea-bridge/.next/
+web3-korea-bridge/out/
 
 # production
-/build
+web3-korea-bridge/build/
 
 # misc
 .DS_Store
@@ -37,10 +37,10 @@ yarn-error.log*
 .vercel
 
 # typescript
-*.tsbuildinfo
-next-env.d.ts
+web3-korea-bridge/*.tsbuildinfo
+web3-korea-bridge/next-env.d.ts
 
-/lib/generated/prisma
+web3-korea-bridge/lib/generated/prisma/
 
 # Claude settings
 .claude/
