@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
+import { submitContactForm, ContactFormState } from '@/app/actions/contact';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -41,7 +42,8 @@ type FormData = z.infer<typeof formSchema>;
 export default function ContactForm({ locale }: ContactFormProps) {
   const t = useTranslations('contact.form');
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [submitState, setSubmitState] = useState<ContactFormState>({});
+  const [feedbackMessage, setFeedbackMessage] = useState<string>('');
 
   const {
     register,
@@ -61,29 +63,50 @@ export default function ContactForm({ locale }: ContactFormProps) {
 
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
-    setSubmitStatus('idle');
+    setSubmitState({});
+    setFeedbackMessage('');
 
     try {
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 2000));
+      // FormData 객체 생성
+      const formData = new window.FormData();
+      formData.append('name', data.name);
+      formData.append('email', data.email);
+      if (data.company) formData.append('company', data.company);
+      if (data.phone) formData.append('phone', data.phone);
+      formData.append('inquiryType', data.inquiryType);
+      formData.append('message', data.message);
+      formData.append('privacy', data.privacy.toString());
+
+      // Server Action 호출
+      const result = await submitContactForm({}, formData);
       
-      // In production, you would send the data to your API endpoint
-      console.log('Form submitted:', data);
+      setSubmitState(result);
       
-      setSubmitStatus('success');
-      reset();
-      
-      // Reset success message after 5 seconds
-      setTimeout(() => {
-        setSubmitStatus('idle');
-      }, 5000);
+      if (result.success) {
+        setFeedbackMessage(result.message || '문의사항이 성공적으로 전송되었습니다.');
+        reset(); // 폼 초기화
+        
+        // 5초 후 성공 메시지 제거
+        setTimeout(() => {
+          setSubmitState({});
+          setFeedbackMessage('');
+        }, 5000);
+      } else {
+        setFeedbackMessage(result.message || '전송에 실패했습니다. 다시 시도해주세요.');
+        
+        // 5초 후 에러 메시지 제거
+        setTimeout(() => {
+          setSubmitState({});
+          setFeedbackMessage('');
+        }, 5000);
+      }
     } catch (error) {
-      console.error('Error submitting form:', error);
-      setSubmitStatus('error');
+      console.error('Form submission error:', error);
+      setFeedbackMessage('시스템 오류가 발생했습니다. 잠시 후 다시 시도해주세요.');
       
-      // Reset error message after 5 seconds
       setTimeout(() => {
-        setSubmitStatus('idle');
+        setSubmitState({});
+        setFeedbackMessage('');
       }, 5000);
     } finally {
       setIsSubmitting(false);
@@ -238,25 +261,48 @@ export default function ContactForm({ locale }: ContactFormProps) {
         </Button>
 
         {/* Status Messages */}
-        {submitStatus === 'success' && (
+        {submitState.success && feedbackMessage && (
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg flex items-center gap-2"
           >
             <CheckCircle className="h-5 w-5 text-green-600 dark:text-green-400" />
-            <p className="text-green-800 dark:text-green-300">{t('success')}</p>
+            <p className="text-green-800 dark:text-green-300">{feedbackMessage}</p>
           </motion.div>
         )}
 
-        {submitStatus === 'error' && (
+        {submitState.success === false && feedbackMessage && (
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg flex items-center gap-2"
           >
             <AlertCircle className="h-5 w-5 text-red-600 dark:text-red-400" />
-            <p className="text-red-800 dark:text-red-300">{t('error')}</p>
+            <p className="text-red-800 dark:text-red-300">{feedbackMessage}</p>
+          </motion.div>
+        )}
+
+        {/* Server-side validation errors */}
+        {submitState.errors && Object.keys(submitState.errors).length > 0 && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="p-4 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg"
+          >
+            <div className="flex items-center gap-2 mb-2">
+              <AlertCircle className="h-5 w-5 text-yellow-600 dark:text-yellow-400" />
+              <p className="text-yellow-800 dark:text-yellow-300 font-medium">입력 정보를 확인해주세요:</p>
+            </div>
+            {Object.entries(submitState.errors).map(([field, messages]) => (
+              messages && messages.length > 0 && (
+                <ul key={field} className="list-disc list-inside text-sm text-yellow-700 dark:text-yellow-400">
+                  {messages.map((message, index) => (
+                    <li key={index}>{message}</li>
+                  ))}
+                </ul>
+              )
+            ))}
           </motion.div>
         )}
       </form>
