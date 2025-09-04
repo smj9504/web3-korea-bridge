@@ -105,7 +105,7 @@ export function BlogPageClient({ locale, initialData }: BlogPageClientProps) {
         {searchQuery && (
           <div className="mb-8">
             <h2 className="text-2xl font-semibold">
-              {t('search.resultsFor')} "{searchQuery}"
+              {t('search.resultsFor')} &ldquo;{searchQuery}&rdquo;
             </h2>
             <p className="text-muted-foreground mt-2">
               {totalItems === 0 
