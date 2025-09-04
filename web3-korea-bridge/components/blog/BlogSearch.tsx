@@ -20,22 +20,27 @@ export function BlogSearch({ onSearch, defaultValue = '' }: BlogSearchProps) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="relative max-w-xl mx-auto">
-      <div className="relative">
-        <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
-        <input
-          type="text"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          placeholder={t('placeholder')}
-          className="w-full pl-10 pr-24 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
-        />
+    <form onSubmit={handleSubmit} className="max-w-xl mx-auto">
+      <div className="flex flex-col sm:flex-row gap-2">
+        <div className="relative flex-1">
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+          <input
+            type="text"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder={t('placeholder')}
+            className="w-full pl-10 pr-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+          />
+        </div>
         <Button
           type="submit"
-          size="sm"
-          className="absolute right-2 top-1/2 -translate-y-1/2"
+          size="lg"
+          className="w-full sm:w-auto"
         >
-          {t('button')}
+          <div className="flex items-center justify-center">
+            <Search className="w-4 h-4 mr-2" />
+            <span>{t('button')}</span>
+          </div>
         </Button>
       </div>
     </form>

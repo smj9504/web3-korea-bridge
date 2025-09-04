@@ -19,9 +19,10 @@ export function Header() {
   const tHero = useTranslations('hero')
 
   // Determine if current page should use dark text (black) or light text (white/light)
-  // Use dark text on all pages when not scrolled or on specific pages
+  // Use dark text on specific pages, light text on home page
   const isDarkTextPage = pathname.includes('/about') || pathname.includes('/services') || pathname.includes('/portfolio') || pathname.includes('/blog') || pathname.includes('/contact')
-  const isLightTextPage = !isDarkTextPage
+  const isHomePage = pathname === `/${currentLocale}` || pathname === '/'
+  const isLightTextPage = isHomePage || !isDarkTextPage
   
   // Pages that should have more opaque white background
   const isOpaqueWhitePage = pathname.includes('/portfolio') || pathname.includes('/blog') || pathname.includes('/contact')
@@ -33,6 +34,26 @@ export function Header() {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  // Close mobile menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as HTMLElement
+      const header = document.querySelector('header')
+      
+      if (isMobileMenuOpen && header && !header.contains(target)) {
+        setIsMobileMenuOpen(false)
+      }
+    }
+
+    if (isMobileMenuOpen) {
+      document.addEventListener('click', handleClickOutside)
+    }
+
+    return () => {
+      document.removeEventListener('click', handleClickOutside)
+    }
+  }, [isMobileMenuOpen])
 
   // 네비게이션 메뉴 항목
   const navItems = [
@@ -75,13 +96,17 @@ export function Header() {
           ? isScrolled
             ? 'bg-white shadow-lg border-b border-gray-200'
             : 'bg-white/95 backdrop-blur-sm'
-          : isDarkTextPage
+          : isHomePage
             ? isScrolled
               ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200'
-              : 'bg-white/80 backdrop-blur-sm'
-            : isScrolled
-              ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200'
-              : 'bg-white/10 backdrop-blur-sm'
+              : 'bg-white/95 backdrop-blur-sm shadow-sm'
+            : isDarkTextPage
+              ? isScrolled
+                ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200'
+                : 'bg-white/80 backdrop-blur-sm'
+              : isScrolled
+                ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200'
+                : 'bg-white/10 backdrop-blur-sm'
       )}
     >
       <nav className="container mx-auto px-4 lg:px-8">
@@ -94,11 +119,13 @@ export function Header() {
             <span className="font-bold text-blue-600">Web3</span>
             <span className={cn(
               "transition-colors duration-300",
-              isDarkTextPage
+              isHomePage
                 ? 'text-gray-800'
-                : isScrolled
+                : isDarkTextPage
                   ? 'text-gray-800'
-                  : 'text-white'
+                  : isScrolled
+                    ? 'text-gray-800'
+                    : 'text-white'
             )}>
               Korea Bridge
             </span>
@@ -114,11 +141,13 @@ export function Header() {
                   'text-sm font-medium transition-all duration-300 hover:scale-105 relative group',
                   pathname === item.href
                     ? 'text-blue-600'
-                    : isDarkTextPage
+                    : isHomePage
                       ? 'text-gray-700 hover:text-blue-600'
-                      : isScrolled
+                      : isDarkTextPage
                         ? 'text-gray-700 hover:text-blue-600'
-                        : 'text-white/90 hover:text-white'
+                        : isScrolled
+                          ? 'text-gray-700 hover:text-blue-600'
+                          : 'text-white/90 hover:text-white'
                 )}
               >
                 {item.label}
@@ -143,11 +172,13 @@ export function Header() {
                 }}
                 className={cn(
                   'flex items-center space-x-2 px-3 py-2 text-sm font-medium transition-all duration-300 hover:scale-105 rounded-lg',
-                  isDarkTextPage
+                  isHomePage
                     ? 'text-gray-700 hover:bg-gray-100 hover:text-blue-600'
-                    : isScrolled
+                    : isDarkTextPage
                       ? 'text-gray-700 hover:bg-gray-100 hover:text-blue-600'
-                      : 'text-white/90 hover:bg-white/10 hover:text-white'
+                      : isScrolled
+                        ? 'text-gray-700 hover:bg-gray-100 hover:text-blue-600'
+                        : 'text-white/90 hover:bg-white/10 hover:text-white'
                 )}
               >
                 <Globe className="w-4 h-4" />
@@ -196,11 +227,13 @@ export function Header() {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className={cn(
               'lg:hidden p-2 rounded-lg transition-all duration-300',
-              isDarkTextPage
+              isHomePage
                 ? 'text-gray-700 hover:bg-gray-100'
-                : isScrolled
+                : isDarkTextPage
                   ? 'text-gray-700 hover:bg-gray-100'
-                  : 'text-white/90 hover:bg-white/10 hover:text-white'
+                  : isScrolled
+                    ? 'text-gray-700 hover:bg-gray-100'
+                    : 'text-white/90 hover:bg-white/10 hover:text-white'
             )}
           >
             {isMobileMenuOpen ? (
@@ -215,26 +248,30 @@ export function Header() {
         {isMobileMenuOpen && (
           <div className={cn(
             'lg:hidden py-4 border-t transition-colors duration-300',
-            isDarkTextPage
+            isHomePage
               ? 'border-gray-200 bg-white'
-              : isScrolled
+              : isDarkTextPage
                 ? 'border-gray-200 bg-white'
-                : 'border-white/20 bg-black/90 backdrop-blur-md'
+                : isScrolled
+                  ? 'border-gray-200 bg-white'
+                  : 'border-white/20 bg-black/90 backdrop-blur-md'
           )}>
-            <div className="space-y-2">
+            <div>
               {navItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
                   className={cn(
-                    'block px-4 py-2 text-sm font-medium transition-all duration-300 rounded-lg',
+                    'block px-6 py-3 text-sm font-medium transition-all duration-300',
                     pathname === item.href
                       ? 'text-blue-600 bg-blue-50'
-                      : isDarkTextPage
+                      : isHomePage
                         ? 'text-gray-700 hover:bg-gray-100 hover:text-blue-600'
-                        : isScrolled
+                        : isDarkTextPage
                           ? 'text-gray-700 hover:bg-gray-100 hover:text-blue-600'
-                          : 'text-white/90 hover:bg-white/10 hover:text-white'
+                          : isScrolled
+                            ? 'text-gray-700 hover:bg-gray-100 hover:text-blue-600'
+                            : 'text-white/90 hover:bg-white/10 hover:text-white'
                   )}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
@@ -244,12 +281,14 @@ export function Header() {
             </div>
             
             <div className={cn(
-              'mt-4 pt-4 border-t transition-colors duration-300',
-              isDarkTextPage
+              'mt-4 pt-4 px-4 border-t transition-colors duration-300',
+              isHomePage
                 ? 'border-gray-200'
-                : isScrolled
+                : isDarkTextPage
                   ? 'border-gray-200'
-                  : 'border-white/20'
+                  : isScrolled
+                    ? 'border-gray-200'
+                    : 'border-white/20'
             )}>
               {/* Mobile Language Switcher */}
               <div className="flex items-center justify-center space-x-4 mb-4">
@@ -259,11 +298,13 @@ export function Header() {
                     'flex items-center space-x-2 px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-300',
                     currentLocale === 'ko' 
                       ? 'text-primary bg-primary/10' 
-                      : isDarkTextPage
+                      : isHomePage
                         ? 'text-gray-700 hover:bg-gray-100'
-                        : isScrolled
+                        : isDarkTextPage
                           ? 'text-gray-700 hover:bg-gray-100'
-                          : 'text-white/90 hover:bg-white/10'
+                          : isScrolled
+                            ? 'text-gray-700 hover:bg-gray-100'
+                            : 'text-white/90 hover:bg-white/10'
                   )}
                 >
                   <span>🇰🇷</span>
@@ -275,26 +316,19 @@ export function Header() {
                     'flex items-center space-x-2 px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-300',
                     currentLocale === 'en' 
                       ? 'text-primary bg-primary/10' 
-                      : isDarkTextPage
+                      : isHomePage
                         ? 'text-gray-700 hover:bg-gray-100'
-                        : isScrolled
+                        : isDarkTextPage
                           ? 'text-gray-700 hover:bg-gray-100'
-                          : 'text-white/90 hover:bg-white/10'
+                          : isScrolled
+                            ? 'text-gray-700 hover:bg-gray-100'
+                            : 'text-white/90 hover:bg-white/10'
                   )}
                 >
                   <span>🇺🇸</span>
                   <span>English</span>
                 </button>
               </div>
-              
-              {/* Mobile CTA Button */}
-              <Link
-                href={`/${currentLocale}/contact`}
-                className="block w-full btn-primary text-center"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {tHero('cta.primary')}
-              </Link>
             </div>
           </div>
         )}

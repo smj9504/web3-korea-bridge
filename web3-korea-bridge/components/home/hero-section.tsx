@@ -75,7 +75,7 @@ export function HeroSection() {
 
   return (
     <section 
-      className="relative min-h-screen flex items-center justify-center overflow-hidden hero-section"
+      className="relative full-height-minus-header flex items-center justify-center overflow-hidden hero-section"
       role="banner"
       aria-label="Hero Section"
     >

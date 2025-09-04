@@ -30,7 +30,7 @@ export function MainLayout({ children, className }: MainLayoutProps) {
 
   return (
     <>
-      <main className={cn('flex-1 relative pt-20', className)}>
+      <main className={cn('flex-1 relative', className)}>
         {children}
       </main>
 

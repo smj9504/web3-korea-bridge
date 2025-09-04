@@ -258,4 +258,19 @@
     border-color: rgba(255, 255, 255, 0.2);
     transform: translateY(-1px);
   }
+
+  /* Header spacing utilities */
+  .header-spacing {
+    @apply pt-16 lg:pt-20;
+  }
+
+  .full-height-minus-header {
+    min-height: calc(100vh - 4rem);
+  }
+
+  @screen lg {
+    .full-height-minus-header {
+      min-height: calc(100vh - 5rem);
+    }
+  }
 }

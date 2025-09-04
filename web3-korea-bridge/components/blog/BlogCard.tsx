@@ -69,7 +69,7 @@ export function BlogCard({ post, variant = 'default' }: BlogCardProps) {
                     <User className="h-3 w-3" />
                     <span>{post.author.name}</span>
                   </div>
-                  <div className="flex items-center gap-1">
+                  <div className="hidden sm:flex items-center gap-1">
                     <Calendar className="h-3 w-3" />
                     <span>{formattedDate}</span>
                   </div>
